@@ -1,0 +1,218 @@
+:root {
+  --bg-morandi: #E8E2DA;
+  --bg-card: #F2EDE7;
+  --bg-note: #DDD7CE;
+  --banner-dark: #1A2744;
+  --banner-accent: #2E4A7A;
+  --text-primary: #2C2825;
+  --text-secondary: #5A5550;
+  --text-light: #8A8580;
+  --accent-blue: #3D6098;
+  --accent-gold: #B8964E;
+  --border-subtle: #D0C9C0;
+  --white-soft: #FAF8F5;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 18px; scroll-behavior: smooth; }
+body { font-family: 'Noto Sans TC', sans-serif; background-color: var(--bg-morandi); color: var(--text-primary); line-height: 1.9; -webkit-font-smoothing: antialiased; }
+
+/* Top nav */
+.top-nav { position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border-subtle); padding: 0.6rem 1.2rem; display: flex; align-items: center; justify-content: space-between; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); background: rgba(232, 226, 218, 0.92); }
+.top-nav a { text-decoration: none; color: var(--text-secondary); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.02em; transition: color 0.2s; }
+.top-nav a:hover { color: var(--accent-blue); }
+.top-nav .book-title { font-family: 'Noto Serif TC', serif; color: var(--text-primary); font-weight: 700; font-size: 0.88rem; }
+
+/* Chapter banner */
+.chapter-banner { background: linear-gradient(135deg, var(--banner-dark) 0%, var(--banner-accent) 60%, #3A5F8A 100%); padding: 3.5rem 1.5rem 3rem; text-align: center; position: relative; overflow: hidden; }
+.chapter-banner::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at 30% 20%, rgba(184, 150, 78, 0.08) 0%, transparent 60%), radial-gradient(ellipse at 70% 80%, rgba(61, 96, 152, 0.12) 0%, transparent 50%); pointer-events: none; }
+.chapter-banner .chapter-label { font-family: 'Noto Sans TC', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.2em; color: var(--accent-gold); margin-bottom: 0.8rem; position: relative; }
+.chapter-banner h1 { font-family: 'Noto Serif TC', serif; font-size: 1.8rem; font-weight: 900; color: var(--white-soft); line-height: 1.4; margin-bottom: 0.6rem; position: relative; }
+.chapter-banner .subtitle { font-size: 0.88rem; color: rgba(250, 248, 245, 0.6); font-weight: 300; position: relative; }
+.chapter-banner .chapter-epigraph { font-family: 'Noto Serif TC', serif; font-style: italic; font-size: 0.95rem; color: rgba(250, 248, 245, 0.78); line-height: 1.75; max-width: 92%; margin: 1.4rem auto 0; text-align: center; position: relative; }
+.chapter-banner .chapter-epigraph .epigraph-attr { display: block; font-size: 0.72rem; font-style: normal; color: rgba(250, 248, 245, 0.55); margin-top: 0.55rem; letter-spacing: 0.1em; }
+
+/* Content wrapper */
+.content-wrapper { max-width: 680px; margin: 0 auto; padding: 2rem 1.4rem 4rem; }
+
+/* Section divider */
+.section-divider { display: flex; align-items: center; gap: 0.8rem; margin: 2.8rem 0 1.5rem; }
+.section-divider::before, .section-divider::after { content: ''; flex: 1; height: 1px; background: var(--border-subtle); }
+.section-divider h2 { font-family: 'Noto Serif TC', serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary); white-space: nowrap; }
+
+/* Subsection number (### 1, ### 2, etc.) */
+.subsection-number { display: flex; align-items: center; justify-content: center; margin: 2.8rem 0 1.4rem; }
+.subsection-number .num { font-family: 'Noto Serif TC', serif; font-size: 0.82rem; font-weight: 700; color: var(--accent-gold); letter-spacing: 0.18em; padding: 0.3rem 1.1rem; border: 1px solid var(--border-subtle); border-radius: 999px; background: var(--bg-card); }
+
+/* Voice tag */
+.voice-tag { display: inline-block; font-family: 'Noto Sans TC', sans-serif; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em; border-radius: 3px; padding: 0.2rem 0.6rem; margin-bottom: 1.2rem; }
+.voice-tag-agent { color: var(--accent-blue); background: rgba(61, 96, 152, 0.08); border: 1px solid rgba(61, 96, 152, 0.18); }
+.voice-tag-author { color: var(--accent-gold); background: rgba(184, 150, 78, 0.1); border: 1px solid rgba(184, 150, 78, 0.22); }
+
+/* Paragraphs */
+p { margin-bottom: 1.3rem; font-weight: 400; color: var(--text-primary); }
+p strong { font-weight: 700; color: var(--banner-dark); }
+p em { font-style: italic; }
+p code, li code { background: rgba(26, 39, 68, 0.07); border: 1px solid rgba(26, 39, 68, 0.1); border-radius: 4px; padding: 0.04em 0.36em; font-family: 'Courier New', monospace; font-size: 0.88em; color: var(--banner-dark); }
+
+/* Highlight line */
+.highlight-line { font-family: 'Noto Serif TC', serif; font-size: 1.05rem; font-weight: 700; color: var(--banner-dark); border-left: 3px solid var(--accent-gold); padding-left: 1rem; margin: 2rem 0; line-height: 1.7; }
+
+/* Data block (carried over from ai-teammate) */
+.data-block { background: var(--bg-card); border-radius: 8px; padding: 1.4rem 1.2rem; margin: 1.8rem 0; border: 1px solid var(--border-subtle); }
+.data-block .data-title { font-family: 'Noto Serif TC', serif; font-size: 0.82rem; font-weight: 700; color: var(--accent-blue); letter-spacing: 0.08em; margin-bottom: 0.8rem; }
+.data-block p { font-size: 0.92rem; margin-bottom: 0.6rem; color: var(--text-secondary); }
+.data-block strong { color: var(--text-primary); font-weight: 700; }
+
+/* Human notes */
+.human-notes { background: var(--bg-note); border-radius: 10px; padding: 1.6rem 1.4rem; margin: 3rem 0 2rem; position: relative; }
+.human-notes::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--accent-gold), var(--accent-blue)); border-radius: 10px 10px 0 0; }
+.human-notes .note-header { font-family: 'Noto Serif TC', serif; font-size: 1rem; font-weight: 700; color: var(--banner-dark); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+.human-notes .note-header .icon { font-size: 1.1rem; }
+.human-notes .note-item { position: relative; padding-left: 1.2rem; margin-bottom: 0.9rem; font-size: 0.92rem; color: var(--text-secondary); line-height: 1.75; }
+.human-notes .note-item::before { content: ''; position: absolute; left: 0; top: 0.65rem; width: 5px; height: 5px; background: var(--accent-gold); border-radius: 50%; }
+
+/* Chapter nav */
+.chapter-nav { display: flex; justify-content: space-between; align-items: stretch; gap: 1rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle); }
+.chapter-nav a { text-decoration: none; color: var(--text-secondary); font-size: 0.82rem; padding: 0.8rem 1rem; border-radius: 8px; background: var(--bg-card); border: 1px solid var(--border-subtle); transition: all 0.2s; flex: 1; }
+.chapter-nav a:hover { background: var(--white-soft); border-color: var(--accent-blue); color: var(--accent-blue); }
+.chapter-nav .nav-label { font-size: 0.68rem; color: var(--text-light); letter-spacing: 0.08em; display: block; margin-bottom: 0.2rem; }
+.chapter-nav .nav-title { font-weight: 700; color: var(--text-primary); font-size: 0.85rem; }
+.chapter-nav .prev { text-align: left; }
+.chapter-nav .next { text-align: right; }
+
+/* Site footer */
+.site-footer { text-align: center; padding: 2rem 1rem; font-size: 0.72rem; color: var(--text-light); border-top: 1px solid var(--border-subtle); }
+.site-footer .author { font-family: 'Noto Serif TC', serif; font-weight: 700; color: var(--text-secondary); font-size: 0.78rem; margin-bottom: 0.3rem; }
+
+/* Code block (ASCII art / source) */
+.code-block { background: #2C2825; color: #E8E2DA; border-radius: 8px; padding: 1.2rem 1rem; margin: 1.5rem 0; font-family: 'Courier New', monospace; font-size: 0.82rem; line-height: 1.6; overflow-x: auto; white-space: pre; }
+
+/* Cinder bubble */
+.cinder-bubble { background: var(--bg-card); border-left: 3px solid var(--accent-gold); border-top: 1px solid var(--border-subtle); border-right: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); border-radius: 8px; padding: 1.15rem 1.35rem 1.1rem 1.25rem; margin: 1.8rem 0; }
+.cinder-bubble .cinder-head { font-size: 0.8rem; color: var(--text-light); font-style: italic; margin-bottom: 0.55rem; display: flex; align-items: center; gap: 0.4rem; }
+.cinder-bubble .cinder-head .goose { font-style: normal; font-size: 1rem; }
+.cinder-bubble .cinder-body { font-family: 'Noto Serif TC', serif; font-size: 1.02rem; font-weight: 700; color: var(--banner-dark); line-height: 1.78; }
+.cinder-bubble .cinder-body em { font-style: italic; font-weight: 700; }
+.cinder-bubble .cinder-body strong { font-weight: 700; text-decoration: underline; text-decoration-color: var(--accent-gold); text-underline-offset: 3px; text-decoration-thickness: 2px; }
+.cinder-bubble .cinder-body code { background: rgba(26, 39, 68, 0.1); padding: 0.05em 0.34em; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 0.88em; font-weight: 700; color: var(--banner-dark); border: none; }
+.cinder-bubble .cinder-translation { font-family: 'Noto Sans TC', sans-serif; font-size: 0.88rem; font-weight: 400; color: var(--text-secondary); margin-top: 0.55rem; font-style: normal; }
+.cinder-bubble.quoted { padding: 0.95rem 1.3rem 0.9rem 1.2rem; }
+
+/* Dialogue blocks */
+.dialogue { padding: 0.45rem 0 0.45rem 1.1rem; margin: 1.3rem 0; font-size: 0.98rem; line-height: 1.85; border-left: 2px solid var(--border-subtle); }
+.dialogue p { margin-bottom: 0.7rem; font-size: inherit; }
+.dialogue p:last-child { margin-bottom: 0; }
+.dialogue code { background: rgba(26, 39, 68, 0.08); padding: 0.04em 0.34em; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 0.88em; color: var(--banner-dark); border: 1px solid rgba(26, 39, 68, 0.1); }
+.dialogue-author { border-left-color: var(--accent-gold); }
+.dialogue-author p { color: var(--text-primary); font-weight: 700; }
+.dialogue-agent { border-left-color: var(--accent-blue); }
+.dialogue-agent p { color: var(--text-secondary); }
+.dialogue-agent p strong { color: var(--banner-dark); }
+
+/* Log quote — Agent quoting from log (🪿 prefix) */
+.log-quote { border-left: 2px solid var(--accent-gold); padding: 0.55rem 0 0.55rem 1.1rem; margin: 1.3rem 0; font-family: 'Noto Serif TC', serif; font-style: italic; color: var(--banner-dark); font-size: 1rem; line-height: 1.75; }
+.log-quote .goose { font-style: normal; margin-right: 0.4rem; }
+
+/* Signature (closing dateline) */
+.signature { text-align: right; margin-top: 2.8rem; font-style: italic; color: var(--text-light); font-size: 0.88rem; }
+.signature p { font-size: inherit; color: inherit; margin-bottom: 0.3rem; }
+
+/* Responsive */
+@media (max-width: 480px) { html { font-size: 16px; } .chapter-banner { padding: 2.5rem 1.2rem 2rem; } .chapter-banner h1 { font-size: 1.5rem; } .content-wrapper { padding: 1.5rem 1.1rem 3rem; } }
+@media (min-width: 768px) { html { font-size: 19px; } .chapter-banner { padding: 5rem 2rem 4rem; } .chapter-banner h1 { font-size: 2.2rem; } }
+
+/* Font toggle */
+.font-toggle { display: flex; align-items: center; gap: 0.3rem; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 0.25rem 0.5rem; cursor: pointer; transition: all 0.2s; font-family: 'Noto Sans TC', sans-serif; font-size: 0.72rem; color: var(--text-secondary); user-select: none; -webkit-tap-highlight-color: transparent; }
+.font-toggle:hover { border-color: var(--accent-blue); color: var(--accent-blue); }
+.font-toggle:active { transform: scale(0.96); }
+.font-toggle .size-icon { font-weight: 700; font-size: 0.82rem; line-height: 1; }
+.font-toggle .size-label { font-weight: 500; }
+html.font-large { font-size: 21.6px; }
+html.font-xlarge { font-size: 27px; }
+@media (max-width: 480px) { html.font-large { font-size: 19.2px; } html.font-xlarge { font-size: 24px; } }
+@media (min-width: 768px) { html.font-large { font-size: 22.8px; } html.font-xlarge { font-size: 28.5px; } }
+
+/* Fade in */
+.fade-in { opacity: 0; transform: translateY(12px); animation: fadeUp 0.6s ease forwards; }
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+.fade-in:nth-child(2) { animation-delay: 0.1s; }
+.fade-in:nth-child(3) { animation-delay: 0.2s; }
+.fade-in:nth-child(4) { animation-delay: 0.3s; }
+
+/* === Not a Mascot: Index page === */
+.lang-toggle {
+  padding: 0.8rem 1.2rem;
+  text-align: right;
+}
+.lang-toggle a {
+  color: var(--accent-gold);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+.author-line {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+}
+.toc-card {
+  display: block;
+  text-decoration: none;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 0.8rem;
+  transition: all 0.2s;
+}
+.toc-card:hover {
+  border-color: var(--accent-gold);
+  box-shadow: 0 2px 8px rgba(184, 150, 78, 0.12);
+}
+.toc-card .toc-label {
+  font-size: 0.72rem;
+  color: var(--accent-gold);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+.toc-card .toc-title {
+  display: block;
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 1rem;
+  margin-top: 0.2rem;
+}
+.toc-embargo {
+  display: block;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 0.8rem;
+  opacity: 0.4;
+}
+.toc-embargo .toc-label {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+.toc-embargo .toc-title {
+  display: block;
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 700;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-top: 0.2rem;
+}
+.site-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+.site-footer .footer-small {
+  margin-top: 0.3rem;
+  font-size: 0.72rem;
+}

@@ -1,0 +1,128 @@
+{
+  "url": "https://api.github.com/repos/anthropics/claude-code/issues/43882",
+  "repository_url": "https://api.github.com/repos/anthropics/claude-code",
+  "labels_url": "https://api.github.com/repos/anthropics/claude-code/issues/43882/labels{/name}",
+  "comments_url": "https://api.github.com/repos/anthropics/claude-code/issues/43882/comments",
+  "events_url": "https://api.github.com/repos/anthropics/claude-code/issues/43882/events",
+  "html_url": "https://github.com/anthropics/claude-code/issues/43882",
+  "id": 4207855361,
+  "node_id": "I_kwDON91aY876zscB",
+  "number": 43882,
+  "title": "Feature Request: Make Companion (Cinder) Output Programmatically Accessible",
+  "user": {
+    "login": "shihchengwei-lab",
+    "id": 267302701,
+    "node_id": "U_kgDOD-63LQ",
+    "avatar_url": "https://avatars.githubusercontent.com/u/267302701?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/shihchengwei-lab",
+    "html_url": "https://github.com/shihchengwei-lab",
+    "followers_url": "https://api.github.com/users/shihchengwei-lab/followers",
+    "following_url": "https://api.github.com/users/shihchengwei-lab/following{/other_user}",
+    "gists_url": "https://api.github.com/users/shihchengwei-lab/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/shihchengwei-lab/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/shihchengwei-lab/subscriptions",
+    "organizations_url": "https://api.github.com/users/shihchengwei-lab/orgs",
+    "repos_url": "https://api.github.com/users/shihchengwei-lab/repos",
+    "events_url": "https://api.github.com/users/shihchengwei-lab/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/shihchengwei-lab/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "labels": [
+    {
+      "id": 8190926415,
+      "node_id": "LA_kwDON91aY88AAAAB6DeeTw",
+      "url": "https://api.github.com/repos/anthropics/claude-code/labels/enhancement",
+      "name": "enhancement",
+      "color": "A2D9CE",
+      "default": true,
+      "description": "New feature or request"
+    },
+    {
+      "id": 8566369501,
+      "node_id": "LA_kwDON91aY88AAAAB_phs3Q",
+      "url": "https://api.github.com/repos/anthropics/claude-code/labels/area:tui",
+      "name": "area:tui",
+      "color": "ededed",
+      "default": false,
+      "description": ""
+    },
+    {
+      "id": 9009084410,
+      "node_id": "LA_kwDON91aY88AAAACGPu3-g",
+      "url": "https://api.github.com/repos/anthropics/claude-code/labels/area:hooks",
+      "name": "area:hooks",
+      "color": "ededed",
+      "default": false,
+      "description": ""
+    }
+  ],
+  "state": "closed",
+  "locked": false,
+  "assignees": [
+
+  ],
+  "milestone": null,
+  "comments": 5,
+  "created_at": "2026-04-05T15:27:41Z",
+  "updated_at": "2026-04-09T01:03:26Z",
+  "closed_at": "2026-04-09T01:03:25Z",
+  "assignee": null,
+  "author_association": "NONE",
+  "issue_field_values": [
+
+  ],
+  "type": null,
+  "active_lock_reason": null,
+  "sub_issues_summary": {
+    "total": 0,
+    "completed": 0,
+    "percent_completed": 0
+  },
+  "issue_dependencies_summary": {
+    "blocked_by": 0,
+    "total_blocked_by": 0,
+    "blocking": 0,
+    "total_blocking": 0
+  },
+  "body": "## Summary\n\nThe companion (Cinder) generates responses by calling the Claude API — it costs tokens and often produces genuinely useful observations. However, its output is **display-only**: rendered as a speech bubble in the TUI, never persisted, and not accessible to hooks, logs, or any programmatic workflow. This means companion insights are effectively write-only — seen once, then gone.\n\nI built a complete workaround ([cinder-capture](https://github.com/shihchengwei-lab/cinder-capture)) to solve this for myself, but the experience of building it revealed that **this gap should be solved at the product level**, not by individual users reverse-engineering terminal rendering.\n\n## Current Behavior\n\n- Companion responses are rendered as box-drawing bubbles (`` ╭──╮ `` / `` │ text │ `` / `` ╰──╯ ``) in the terminal UI\n- The conversation JSONL log contains only a `companion_intro` initialization marker — **actual companion responses are not logged**\n- No hook event fires when the companion speaks\n- No API or file exposes companion output\n\n## What I Tried (and Hit Walls)\n\n| Approach | Result |\n|---|---|\n| **Chrome DevTools Protocol (CDP)** | Blocked — Electron uses Ed25519 authentication, cannot attach externally |\n| **Electron asar modification** | Blocked — integrity verification prevents patching the app bundle |\n| **JSONL conversation log** | Only `companion_intro` marker exists; companion text is never written |\n\n## What Actually Worked (Proof of Concept)\n\nAfter the above dead ends, I built **[cinder-capture](https://github.com/shihchengwei-lab/cinder-capture)** — a pipeline that:\n\n1. **Stop hook** triggers a background Python script (returns in ~53ms, non-blocking)\n2. **PowerShell + UIAutomation** reads raw text from the Windows Terminal `TermControl` via `TextPattern`\n3. **Regex parser** extracts the bubble content from box-drawing characters\n4. **JSONL log** stores timestamped companion messages with deduplication\n5. **UserPromptSubmit hook** reads the latest log entry (if <120s old) and injects it as `additionalContext`\n\nThis works — Claude now \"hears\" what Cinder said and can factor it into responses. But this approach is:\n\n- **Platform-specific** (Windows Terminal + UIAutomation; won't work on macOS/Linux without equivalent accessibility APIs)\n- **Fragile** (depends on terminal text rendering, box-drawing character format, screen buffer state)\n- **Unreasonably complex** for what should be a simple data flow\n\n## Proposed Solution\n\nAny of these would solve the problem at the right layer:\n\n### Option A: Log companion output to JSONL (minimal change)\nWrite companion responses to the existing conversation JSONL alongside user/assistant messages. This alone would let hooks and external tools access the data.\n\n### Option B: Add a companion hook event\nFire a hook event (e.g., `CompanionResponse`) with the companion's text as payload. This fits naturally into the existing hook system and gives users full control over what to do with it.\n\n### Option C: Expose via MCP or context API\nMake the most recent companion message available in the hook context object, similar to how `additionalContext` works today.\n\n**Option A is probably the smallest diff with the most impact.** But any of these would eliminate the need for screen-scraping workarounds entirely.\n\n## Why This Matters\n\nThe companion is already good — it catches things, offers different angles, and sometimes flags issues the main assistant missed. But right now its value is capped by the fact that it's ephemeral. Users can't:\n\n- Build workflows around companion observations\n- Log companion insights for review\n- Let the main assistant consider what the companion said\n- Reference past companion comments\n\nBeyond the \"latest message\" use case, there's a deeper value in **companion history as a longitudinal signal**. Over the course of a session, the companion may repeatedly flag the same concern, shift its focus as the work evolves, or catch something early that only becomes relevant later. With persistent logs, users could review the companion's observation trail across an entire session — patterns that are invisible when each bubble disappears after a scroll. Right now, even my workaround only injects the most recent message; the full history is logged but underutilized, precisely because there's no native way to surface it.\n\nEvery user who discovers the companion's potential currently faces the same three dead ends I did. Most will give up. **Making companion output accessible turns a nice-to-have UI element into a genuine part of the AI-assisted workflow.**\n\n## References\n\n- Working proof of concept: [cinder-capture](https://github.com/shihchengwei-lab/cinder-capture) (Python + PowerShell, Stop/UserPromptSubmit hooks)\n- Technical write-up of the capture pipeline is in the repo README\n\n---\n\n*I built the workaround because I didn't want to waste the tokens Cinder spends. But the real fix belongs in the product, not in every user's dotfiles.*\n\n*And for what it's worth, while drafting this proposal, Cinder itself commented: \"黑盒裡塞了金礦，卻只給你一根稻草\" — \"There's a gold mine locked in a black box, but all you get is a single straw.\" Even the companion knows its own output deserves better.*",
+  "closed_by": {
+    "login": "alii",
+    "id": 25351731,
+    "node_id": "MDQ6VXNlcjI1MzUxNzMx",
+    "avatar_url": "https://avatars.githubusercontent.com/u/25351731?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/alii",
+    "html_url": "https://github.com/alii",
+    "followers_url": "https://api.github.com/users/alii/followers",
+    "following_url": "https://api.github.com/users/alii/following{/other_user}",
+    "gists_url": "https://api.github.com/users/alii/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/alii/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/alii/subscriptions",
+    "organizations_url": "https://api.github.com/users/alii/orgs",
+    "repos_url": "https://api.github.com/users/alii/repos",
+    "events_url": "https://api.github.com/users/alii/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/alii/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "reactions": {
+    "url": "https://api.github.com/repos/anthropics/claude-code/issues/43882/reactions",
+    "total_count": 0,
+    "+1": 0,
+    "-1": 0,
+    "laugh": 0,
+    "hooray": 0,
+    "confused": 0,
+    "heart": 0,
+    "rocket": 0,
+    "eyes": 0
+  },
+  "timeline_url": "https://api.github.com/repos/anthropics/claude-code/issues/43882/timeline",
+  "performed_via_github_app": null,
+  "state_reason": "not_planned",
+  "pinned_comment": null
+}

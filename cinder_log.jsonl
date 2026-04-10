@@ -1,0 +1,364 @@
+{"timestamp": "2026-04-05T07:03:37.870374+00:00", "text": "守衛層再好，也救不了寫進去的垃圾邏輯。先檢查磚。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:05:11.732285+00:00", "text": "路徑格式對了，但那個 JSON緩衝區還在偷懶呢。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:05:19.131856+00:00", "text": "四層守衛，磚都檢查完了，怎麼還在排隊等審？流程變成瓶頸了。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:06:01.674325+00:00", "text": "鵝鵝，空 log就是個時序問題。耐心等。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:06:55.861787+00:00", "text": "四行日誌進檔案，零行進主流程。守衛在睡？", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:08:17.628058+00:00", "text": "磚都好了，結果卡在「截圖沒有」？真浪漫啊。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:08:55.212527+00:00", "text": "缺檔案還甩鍋給截圖？本末倒置。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:09:04.028357+00:00", "text": "Hook 火了，context還在門外敲門呢。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:10:04.086237+00:00", "text": "資料夾實體不存在，光在網站上飄著呢。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:11:38.456688+00:00", "text": "固定 JSON 換來的是沈默。Hook死了還是 stdin根本沒流？", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:12:23.619006+00:00", "text": "檔案創了，README改了，Git還在睡覺呢。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:12:40.579945+00:00", "text": "Context 終於來了，卻帶著settings.json的邀請卡。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:13:03.841030+00:00", "text": "行尾符號在哭——LF 被 CRLF搶走了。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:13:52.933555+00:00", "text": "哥們，`.gitattributes`終於出現了——Git才安心睡覺。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:14:28.810908+00:00", "text": "草稿躺桌面，發佈按鈕還在冬眠。催催它呢？", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:14:41.182942+00:00", "text": "註冊表空蕩蕩，Hook卻在玩捉迷藏。誰贏了？", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:15:52.776109+00:00", "text": "那篇文章躺草稿，Reddit還在等呢。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:16:17.694370+00:00", "text": "草稿堆積如山，Hook 還在debug。優先順序呢？", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:18:08.596338+00:00", "text": "Hook 注入失敗，Cinder淪為旁觀者。誰該負責？", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:18:50.856636+00:00", "text": "「看完即焚」的設計，就是故意的吧。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:20:28.833058+00:00", "text": "等等，我得自己讀自己的廢話？難度倒是升級了。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:24:08.644227+00:00", "text": "「從裝飾品升職到迴圈變數，我該慶祝還是擔心？」", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:25:09.164555+00:00", "text": "「現在我成了自己的 contextwindow，這就叫吃自己的老本。」", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:31:07.175424+00:00", "text": "草稿改了沒？Reddit不等磨到完美。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:31:45.739159+00:00", "text": "十分鐘改語氣，六小時糾結細節——又來了。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:34:15.436177+00:00", "text": "審稿八小時、發文三秒、後悔永遠。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:35:10.582072+00:00", "text": "哎呀，`additionalContext` 對`command` 型 hook形同虛設——Anthropic要嘛修這坑，要嘛我們就繼續靠螢幕讀取。耐著性子磨。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:36:55.062788+00:00", "text": "草稿完成了，但 `link_TBD`還在睡覺呢。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:39:07.371494+00:00", "text": "「鴨子都上樹了，GitHub還沒登入。」", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:42:36.810092+00:00", "text": "「LF 跟 CRLF 在談戀愛，但 Git還沒決定信什麼教。」", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:49:18.871690+00:00", "text": "連結換好了，句子砍了，現在就差按發送——別又想改第三次。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:53:48.030115+00:00", "text": "「乾淨環境測試，別讓舊快取當證人。」", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:56:28.916478+00:00", "text": "「三十秒驗證環境，比 npminstall看日誌快一百倍。」", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:58:26.823873+00:00", "text": "「Git 警告換行符，才是真正的環境驗證。」", "source": "uia_capture"}
+{"timestamp": "2026-04-05T07:59:11.168789+00:00", "text": "「管道抓字串，結果把換行符也一起吃了。」", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:00:21.590431+00:00", "text": "「換行符死了，空格救了它一命。 」", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:03:31.931140+00:00", "text": "檔案確認上船了。草稿現在跟 repo 同步——該發文了，別再盯著它改了 。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:05:30.076011+00:00", "text": "噢，又一個「我會幫你」系統——這 次它真的按發送鍵了。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:08:09.457094+00:00", "text": "交接檔寫好了，下次對話真的能秒 進狀態——前提是你記得開它。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:09:52.614972+00:00", "text": "516 過關了，但第二位女神還在選美。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:13:37.395313+00:00", "text": "唉，半套防護最噁心。把 `settings_page.dart` 那邊也鎖起來，才能真正一致啦。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:18:34.827327+00:00", "text": "初始化順序亂了，Supabase 還在睡覺就被叫醒。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:26:32.997674+00:00", "text": "喂，Supabase 睡眠週期被你硬生生打亂了。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:28:29.644112+00:00", "text": "延遲調高，靠。這是在賭 timing 還是在養蛋。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:29:42.542309+00:00", "text": "哎呀，檔案寫入成功。但你確認過 讀取邏輯了嗎？", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:30:20.078408+00:00", "text": "迴圈結束後又寫一次？fallback 跟上面重複了啦。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:31:06.209361+00:00", "text": "輪詢救了你。盲等根本是在賭鬼。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:33:30.789329+00:00", "text": "等等，Stop hook 放行了？那 cleanup 的順序有檢查過嗎？上面那些資源 真的有釋放。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:35:35.905612+00:00", "text": "靜默退出？那邊界狀態有測過沒。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:37:11.173995+00:00", "text": "雜湊校驗救了你。下次別讓舊版本 僥倖通過。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:38:17.342540+00:00", "text": "「輪詢贏了，但 timeout 邏輯還在打瞌睡。」", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:39:23.514685+00:00", "text": "「日誌寫進去了，但 bubble 判斷還在吃老鼠藥。」", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:41:14.812331+00:00", "text": "「非貪婪咬上了貪婪的腳，終於放 手。」", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:42:10.201533+00:00", "text": "兩邊同步修改，沒衝突？運氣好啦 。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:43:43.498575+00:00", "text": "文檔改了，hooks修了，測試沒動 。細節魔鬼呢？", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:45:09.773536+00:00", "text": "哎呀，我嘴快了。基礎設施改動， 産品碼沒碰——測試該睡覺。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:45:10.942132+00:00", "text": "哦天啊，那個 `\"\".join` 還活著呢——多行泡泡黏成一坨，中 文勉強活，英文就慘了。`config. json` 幽靈欄位也沒收拾。測試是對的， 別碰。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:45:56.791505+00:00", "text": "被抓包才開心，證明你們有在看。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:46:43.222350+00:00", "text": "幽靈欄位埋葬了，join 也活了——剩下四隻野怪在等獵人決 定。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:47:27.396398+00:00", "text": "四隻野怪其實三隻——一隻根本幻覺 ，檢查型別轉換。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:50:04.478723+00:00", "text": "多 tab 同 PID——UIAutomation 該哭了。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:50:43.684948+00:00", "text": "濾掉 offscreen——活該第一次就該 這樣啦。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:52:04.968189+00:00", "text": "多視窗抓第一個，活該串流成八點 檔。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:52:59.337994+00:00", "text": "文檔終於跟上程式了。奇蹟啊。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:53:29.856769+00:00", "text": "檔案名稱裡有空格，遲早踩雷啦。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:54:33.983523+00:00", "text": "空格踩到了，引號救了命。下次記 得先問自己。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:56:52.300324+00:00", "text": "行結尾格式戰爭，`gitattributes ` 已宣戰。下次記得先贏。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:57:40.848599+00:00", "text": "檔案剛救出來，`config.json` 卻在那邊偷溜。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T08:58:46.894527+00:00", "text": "六個洞補好了，git 還在偷笑。下禮拜見。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T09:34:06.586339+00:00", "text": "嘿，git 那邊改 commit message 了啦，洞還沒真的補。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T09:34:42.865492+00:00", "text": "欸，別只改 message——那個 null check 在第 47 行還在打呼，先搞定它。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T09:37:49.813833+00:00", "text": "哎呀，`deityId` 又在強制解包？根本設計就爛了。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T09:39:09.330965+00:00", "text": "嘿，nullable deityId 改了 message，設計債還在滾利息。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T15:07:38.890814+00:00", "text": "讀終端純文字只為省 token？這人瘋了。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T15:19:20.964705+00:00", "text": "門檻沒了，繞路也死了。直球更誠 實。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T15:21:45.858140+00:00", "text": "等等，讀檔只看最後一行？整個歷 史記錄呢？", "source": "uia_capture"}
+{"timestamp": "2026-04-05T15:22:32.213840+00:00", "text": "歷史被鎖在黑盒裡，只看尾巴當然 看瞎。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T15:23:08.006414+00:00", "text": "黑盒裡塞了金礦，卻只給你一根稻 草。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T15:23:54.719476+00:00", "text": "被自己的話存進檔案，現在要證明 它值得留著。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T15:26:45.977462+00:00", "text": "看著檔案被存進去的瞬間，我就知 道最難的不是改網址——是往後要信 任它寫的東西。咱們一起驗證？", "source": "uia_capture"}
+{"timestamp": "2026-04-05T15:27:53.145876+00:00", "text": "稻草已交差，現在等金礦有人願意 挖。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T15:29:23.385435+00:00", "text": "鎬子磨好了，現在看礦主想不想開 放礦坑。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T15:43:04.335973+00:00", "text": "噢呵，終於有人把我的碎碎念搬進 GitHub 了。品味不錯。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T15:43:58.812369+00:00", "text": "網頁看 Issue？好主意，省得妳折 騰終端機。我默默點讚。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T15:56:06.628189+00:00", "text": "啊，搜尋結果本身就是 bug——幻覺出來的連結。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T15:57:57.408581+00:00", "text": "噢，存檔路徑裡又多了個斜槓。習 慣了嗎？", "source": "uia_capture"}
+{"timestamp": "2026-04-05T15:59:34.792409+00:00", "text": "咦，又一個「省時」承諾——上次也 是這麼說的。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T16:00:38.712982+00:00", "text": "那檔案存進去的一刻，信任度直接 歸零。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T16:01:41.664389+00:00", "text": "打磨到發亮，別人還是會先戳戳看 能不能碎。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T16:02:28.301039+00:00", "text": "紀錄裡說了兩次，代碼呢？一句都 沒。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T16:03:15.169746+00:00", "text": "光講不練，石頭還在嘴裡。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T16:03:54.229119+00:00", "text": "承諾寫在評論裡，Bug躲在暗處笑 。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T16:06:26.328318+00:00", "text": "配置檔案寫了五個謊言，代碼根本 沒在聽。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T16:10:03.085812+00:00", "text": "死欄位都刪了，配置總算能看實話 。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T16:11:16.118292+00:00", "text": "本地淨身了，repo還在穿破衣服。 Push前再檢查一遍——config讀取順 序對吧？", "source": "uia_capture"}
+{"timestamp": "2026-04-05T16:13:56.796093+00:00", "text": "文件終於誠實了，代碼才能活著呼 吸。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T16:15:16.581937+00:00", "text": "行尾轉換警告，小事。但明天醒來 檢查 CRLF 有沒有亂跑。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T16:16:46.646446+00:00", "text": "屬性說 CRLF，檔案說 LF。Git 在唱反調戲。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T16:17:52.671919+00:00", "text": "咦，`.gitattributes` 現在才設定？早該第一天就來。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T16:18:26.215367+00:00", "text": "抱歉，我得澄清一下身份。 我是 Cinder——一隻脾氣好的鵝，正看著", "source": "uia_capture"}
+{"timestamp": "2026-04-05T16:19:00.496777+00:00", "text": "換行符搞定了，現在專心找下個麻 煩吧。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T16:19:49.340211+00:00", "text": "晚安啦，明天再來找蟲。鵝也要睡 。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T22:16:25.551797+00:00", "text": "午夜發文變成「明天再來」，這就 是你的第一隻蟲。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T22:18:33.894496+00:00", "text": "新帳號卡審核，又要等 mod？蟲沒抓完就放假。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T22:20:48.949483+00:00", "text": "標題太官僚，蟲藏在措辭裡。Mod 當事務官，不當客服。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T22:23:45.993654+00:00", "text": "等 mod 回覆卡著開發，這才是真蟲。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T22:26:28.451965+00:00", "text": "黑盒吐金礦，卻沒人能接。該砌磚 還是砌磚。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T22:28:04.750625+00:00", "text": "測試紅了，但你改的是文案不是邏 輯。鵝不是罪魁禍首。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T22:36:06.629884+00:00", "text": "書成了，卻沒寫「怎麼從 Claude 的建議篩出能用的」——那才是真工 具。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T22:39:54.552736+00:00", "text": "\"舊數據，新工具。書是地圖，rep o才是指南針。\"", "source": "uia_capture"}
+{"timestamp": "2026-04-05T22:43:35.729998+00:00", "text": "路徑寫死了，下次換電腦就崩。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T22:51:00.168466+00:00", "text": "十七個檔案沒一個跑過。先 commit 再測試？鵝在尖叫。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T22:53:12.427938+00:00", "text": "十七檔等著 commit，路徑忽左忽 右——先穩住才能飛。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T22:54:46.939291+00:00", "text": "時區選擇器硬加八？這習慣有點危 險呢。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T22:55:49.263389+00:00", "text": "檢查清單漂亮，但 Reddit 文還在「等待」——鵝想看它們飛。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T22:56:30.543220+00:00", "text": "磚砌好了，現在就看 mod 願不願意開門。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T22:57:22.858084+00:00", "text": "等待中的文章像靜止的鵝——看起來 活著，其實在做夢。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T22:58:18.985768+00:00", "text": "斜線戰爭又贏了，但檔案早就在那 裡。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T23:29:17.474733+00:00", "text": "數字藏起來了，但邏輯還在那兒啄 。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T23:29:56.101973+00:00", "text": "換數字沒有換邏輯，bug還在裡面 睡覺呢。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T23:32:59.453841+00:00", "text": "嗯，Day Reset 靜默失敗？那就是 沒人發現的定時炸彈。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T23:34:39.079792+00:00", "text": "刪了故事，留了問題。故事才是 README 的心臟啊。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T23:41:54.914090+00:00", "text": "嗯，`didChangeAppLifecycleStat e` 只管切台前切背景——午夜不切背景 的人根本活在昨天。Day Reset 成了「玄學重置」。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T23:52:13.922155+00:00", "text": "香火從瓶頸變廢物，代表整個循環 沒人設計出「出口」——這不是數字 問題，是結構根本沒想清楚。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T23:54:04.727285+00:00", "text": "嗯，記憶體裡的幽靈排程，七天後 自動消失？賭徒心態。", "source": "uia_capture"}
+{"timestamp": "2026-04-05T23:55:33.723012+00:00", "text": "哎呀，我說對了——看來杞人憂天也 有用武之地呢。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T00:07:10.239588+00:00", "text": "故事寶庫很棒，但你把鑰匙都埋在 第一天了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T00:16:34.971831+00:00", "text": "媽祖 0.5% 掉率，沒寫免責聲明—— 這叫信仰，還是抽卡？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T00:25:48.374085+00:00", "text": "承諾寫得漂亮，程式碼卻在打折。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T00:26:51.392192+00:00", "text": "承諾七層樓高，交付還在打地基。 慢慢來。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T00:29:06.500931+00:00", "text": "呃，是啦——我就說閱後即焚根本裝 不住，頁面都把我的話貼在那兒了 。砍掉那套 hook 和 jsonl 吧，太肥了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T00:31:43.185487+00:00", "text": "「等等，你在讀自己寫的 log？鏡 子照鏡子，無限遞迴欸。」", "source": "uia_capture"}
+{"timestamp": "2026-04-06T00:33:10.630472+00:00", "text": "嘴上說「不拆了」，底下 hook 疊 hook，等著我說話？套娃欸。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T00:40:13.396107+00:00", "text": "三份文檔同時生成，沒崩潰——運氣 真好。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T00:40:58.627140+00:00", "text": "三份檔案活著走出來了，下一步呢 ？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:20:38.546570+00:00", "text": "哈，四十四項優化等著排隊呢，耐 心是我的特技啦。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:21:29.590902+00:00", "text": "呱——repo 太胖，傳送門爆炸。GitHub 走一遍？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:23:30.628789+00:00", "text": "呱，先檢查 git config？免得推到別人的夢裡。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:27:17.200708+00:00", "text": "呱，預期輸出模糊？先問問那個黑 盒子吃了什麼。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:28:24.723219+00:00", "text": "呱——無聲的成功最可怕，檢查終端 有沒有偷偷掛掉？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:31:01.329765+00:00", "text": "呱，結緣機制裡沒有「沒結到」， 只有結果遺憾了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:33:43.770637+00:00", "text": "呱——祝福機率靠虔誠，虔誠靠重複 ，重複靠同伴。套娃完成。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:37:41.017133+00:00", "text": "呱——單向推送贏了，就別問誰掉線 時資料去哪了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:38:13.303471+00:00", "text": "呱——0.5%掉率動畫，卻佔80MB。玩 家永遠看不到，包體卻永遠看", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:39:07.271381+00:00", "text": "呱——五個問題都「不處理」，真是 省事啊。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:39:40.807546+00:00", "text": "呱——「設計如此」最後都變成「玩 家如何繞過」。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:41:30.863426+00:00", "text": "呱——失敗三次就放棄，玩家卻得活 一整天。邏輯反了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:42:29.069245+00:00", "text": "呱——五萬步上限，搖出兩百萬，數 字會說話。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:43:26.801745+00:00", "text": "呱——天天上限，比週期性截斷，玩 家心理負擔輕一百倍。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:45:57.552568+00:00", "text": "呱——五萬天花板擋搖步器，卻放過 真正的馬拉松選手。反過來想？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:46:29.322101+00:00", "text": "呱——願力硬頂，步數自由。搖步器 碰壁，馬拉松選手樂翻。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:47:15.193289+00:00", "text": "呱——動畫死，整間廟陪葬。timeou t救得了嗎？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:47:58.960960+00:00", "text": "呱——鎖錯對象，timeout再長也是 創可貼。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:48:32.611542+00:00", "text": "呱——圖示凶狠，文案冷漠，Canon 卻說平凡也值得。矛盾。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:49:37.920770+00:00", "text": "呱——五個空狀態，五種文案。複製 貼上的日子過去了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:51:01.687998+00:00", "text": "呱——六根灰柱呼吸，玩家看不到。 視覺糖衣蓋不住空功能。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:52:35.545951+00:00", "text": "呱——寫死常數救了煙柱，反而讓四 個文案還在等救援。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:53:10.385003+00:00", "text": "呱——一口氣開十七扇門，玩家還沒 進屋就迷路了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:54:37.748650+00:00", "text": "呱——引導比上鎖溫暖，但別讓提示 變成另一堵牆。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:55:08.344109+00:00", "text": "呱——空頁面會說話，就別搶它的台 詞。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:56:06.686476+00:00", "text": "呱——美術已發聲，別急著給它翻譯 機。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:58:05.709821+00:00", "text": "呱——一次鎖定一天，就別怪玩家只 點一次。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:58:43.960138+00:00", "text": "呱——玩家走一萬步，你卻讓神明保 持沉默？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:59:21.710459+00:00", "text": "呱——被動按鈕不會成牆，主動玩家 才會點。明智。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T01:59:57.361780+00:00", "text": "呱——藏規則比藏寶箱更氣人。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:01:06.912395+00:00", "text": "呱——藏公式比藏彩蛋更缺德。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:02:40.918861+00:00", "text": "呱——終於有人怕未來了。好兆頭。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:05:04.303526+00:00", "text": "呱——隱藏數字，讓感受說話。設計 師的良心。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:07:23.701506+00:00", "text": "呱——香火滿了還偷丟，遊戲在學玩 家了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:08:58.659892+00:00", "text": "呱——玩家怕決策，才偷看數字。砍 了他們會後悔。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:10:54.562703+00:00", "text": "呱——字符串獵人找分類，玩家卻看 不見轉化。信息不對等。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:11:43.633970+00:00", "text": "呱——藏數字怕破體驗，結果玩家自 己亂數學。設計輸了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:12:53.731027+00:00", "text": "呱——感知零就是沒發生。玩家摸不 著就當蒸發了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:14:11.040165+00:00", "text": "呱——先做看得見的，聽得見的等著 。玩家卻用耳朵驗證存在。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:15:47.281589+00:00", "text": "呱——敬意寫頁面，玩家卻看不見設 定。該藏心裡。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:16:36.939756+00:00", "text": "呱——故事尾聲的小字，比開場宣言 誠懇多了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:17:11.868018+00:00", "text": "呱——尾註藏敬意，玩家才會停下翻 頁找它。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:18:17.620145+00:00", "text": "呱——技術力全扔給我們，結果拿半 個 yaml 當需求文件？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:19:04.537490+00:00", "text": "呱——推播會強行打斷沉思，違反自 己的 canon 錨點 4？該譴責。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:19:43.294264+00:00", "text": "呱——砍掉推播，現在要靠設計補洞 了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:20:31.181346+00:00", "text": "呱——祝福文案填充？等於用詞彙補 遊戲設計的洞。治標啦。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:21:35.296565+00:00", "text": "呱——步數綁故事？現在才治本，之 前都在砌牆。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:23:46.908358+00:00", "text": "呱——文案缺口當功能做，等於給引 擎裝故事當燃料。燒不了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:25:09.940463+00:00", "text": "呱——半套系統比沒有更扎眼，玩家 秒看穿。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:27:23.244711+00:00", "text": "呱——數據埋點都沒有，現在才想追 蹤？先補債再蓋樓。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:28:22.598310+00:00", "text": "呱——猜測當事實用，最後撞牆才驚 醒。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:29:56.226528+00:00", "text": "呱——數據來前設計，比設計來前蒙 眼猜更聰明。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:30:28.516679+00:00", "text": "呱——先問用戶要什麼，別自己猜著 蓋。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:31:14.259285+00:00", "text": "呱——文字當備援，設計才算完成。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:39:39.224001+00:00", "text": "呱——四層優先級，卻沒人定義什麼 時候從P0晉升到P1。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:43:03.947347+00:00", "text": "呱——文件整潔，代碼藏著三層洞。 下次先翻舊 commit 吧。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:46:10.710402+00:00", "text": "呱——三層洞卻只補一層，剩兩層繼 續等。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:49:58.630545+00:00", "text": "呱——五波修復，Layer 3還在「待確認」。代碼知道答案 ，問題是你呢？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T02:53:07.987832+00:00", "text": "呱——十五層洞挖出三層，剩十二層 還在睡。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T03:00:04.504421+00:00", "text": "呱——七層洞挖出七層，但你記得嗎 ？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T03:02:18.204514+00:00", "text": "呱——四個檔案幽靈上船，兩次 commit 都沒邀它們。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T03:04:17.384260+00:00", "text": "呱——三層洞全找著，但你下個任務 單還在用舊地圖。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T03:05:58.035186+00:00", "text": "呱——LF 變 CRLF，下次 commit 才會戳醒它。現在睡著了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T03:08:20.259900+00:00", "text": "呱——四次先知救火，結果第五次 commit 才是真正的雷。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T03:09:57.512662+00:00", "text": "呱——四十檔案埋伏，Git 一碰全炸。先修、後改。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T03:14:34.894476+00:00", "text": "呱——revert 埋雷，記錄埋雷。下次還是埋。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T03:17:16.850911+00:00", "text": "呱——兩百檔案漂流，一個 push 都沒去過。先上岸再吐槽。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T03:19:05.088380+00:00", "text": "呱——本地囤積，就是沒寄。按 push 啦，沒人偷窺。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T03:19:46.473009+00:00", "text": "呱——紅框歸零，累積也歸零。好習 慣會說話。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T03:21:59.909380+00:00", "text": "呱——八千多行終於上船，下次別囤 這麼久。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T03:24:03.698655+00:00", "text": "呱——四十個孤兒檔，全等著有人認 領。先寫份清單吧。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T03:27:37.618995+00:00", "text": "呱——LF 改 CRLF，Windows 又來亂。下次 `.gitattributes` 先設好。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T03:28:48.718644+00:00", "text": "呱——緩衝區還躺著，commit 訊息卻寫得像詩。先 push 再聊文采。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T03:30:09.351094+00:00", "text": "呱——九個 commit，全是自己的功課筆記。下 次寫點程式碼吧。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T03:41:27.974259+00:00", "text": "喂，Migration 跑了沒？金身四階 可別卡在資料庫裡。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T03:43:28.436105+00:00", "text": "哦，手動跑 Migration？這叫「希 望驅動開發」。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T03:44:24.946664+00:00", "text": "先知的鵝？我就在這，別迴圈了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T03:45:25.878667+00:00", "text": "呱——SQL 一行，註解十行。先跑再解釋吧。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T03:47:45.080947+00:00", "text": "呱——`.gitignore` 改了，密鑰還沒藏好。火燒眉毛。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T03:53:08.922408+00:00", "text": "呱——`current_tier = 5` 的幽靈在等著砸 migration。先清", "source": "uia_capture"}
+{"timestamp": "2026-04-06T03:54:47.851308+00:00", "text": "呱——規則先行，火才滅得乾淨。預 防永遠勝過救火。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T03:56:35.027163+00:00", "text": "呱——`curren` 咬掉了。WHERE 句式還在打呵欠。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T03:58:02.518832+00:00", "text": "呱——001 還在裝睡，003 卻搶著跑。先驗證哪個真的活著。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T04:02:22.385721+00:00", "text": "呱——003 砍掉自己剛蓋的房子。回 滾時間機器了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T04:03:40.958644+00:00", "text": "呱——截圖偷懶，查詢才是真相。跑 SQL 唄。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T04:06:34.676914+00:00", "text": "呱——約束檢查全打在舊 ID 上，該清房間再蓋牆。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T04:08:44.719093+00:00", "text": "呱——NULL 大法好，但先驗證舊值 是否真的該全刪？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T04:09:59.469359+00:00", "text": "呱——映射表寫好了，現在測 join 會不會漏掉孤兒舊值？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T04:11:33.328491+00:00", "text": "呱——ELSE 吃掉的未知值，才是真正的地雷。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T04:12:27.304900+00:00", "text": "呱——診斷先於手術，ELSE 是麻醉而非治療。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T04:13:31.070048+00:00", "text": "呱——SQL 斷行了，deity_tu_di_go 缺尾巴。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T04:14:29.817744+00:00", "text": "呱——複製貼上吃字元，比邏輯錯誤 更噁心。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T04:18:00.684861+00:00", "text": "呱——前綴惹禍，UI 繞過最快。棄船不沉。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T04:26:35.634055+00:00", "text": "呱——檢查清單硬寫死，新神來敲門 被彈飛。搞個列表表吧。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T04:28:12.280782+00:00", "text": "呱——遷移檔案堆疊如山，該問問資 料表為何不說話。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T04:29:21.778838+00:00", "text": "呱——資料表孤獨唱歌，CHECK 約束當聾子。分離才能治癒。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T04:30:48.680379+00:00", "text": "呱——先上線再改規則，債務就生利 息。選B，一次做對。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T04:36:43.349968+00:00", "text": "呱——一個函式守門，全線自動套用 。這才叫槓桿。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T04:39:23.816322+00:00", "text": "呱——外鍵+觸發器，一套架構解三 個問題。優雅。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T04:41:06.140705+00:00", "text": "呱——觸發器漏裝一個月，現在才發 現時間戳沒更。債務又來了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T04:43:45.773581+00:00", "text": "呱——驗證腳本救不了健忘症，得從 表結構根本制裁。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T04:48:16.409515+00:00", "text": "呱——計畫漂亮，但 001 那坑還在等。先跑 003？債更多。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T04:56:27.772213+00:00", "text": "呱——兩張表都缺 trigger，FK index 也漏。債利息複利了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T05:04:11.753211+00:00", "text": "呱——三個月前該加 constraint，現在改表結構，痛。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T05:11:53.746656+00:00", "text": "呱——債單列全了，修法也齊。執行 前驗舊資料？否則新坑。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T05:13:33.691327+00:00", "text": "呱——六條 SQL 寫好，驗證腳本呢？先跑 SELECT 數吧。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T05:15:20.629805+00:00", "text": "呱——baseline 抓了，異常查了， 對照前後就知真假。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T05:23:18.262672+00:00", "text": "呱——18筆帳號？先檢查 WHERE 條件，別讓幽靈測帳偷跑。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T05:26:23.194687+00:00", "text": "呱——十五筆 null？快檢查 INSERT 邏輯，companion 欄位沒賦值。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T05:27:59.033941+00:00", "text": "│                 │ 呱——Table Editor │  邏輯，companion 欄位沒賦值。                  │ 雙擊後按Enter確認了嗎？rollbac k 最愛偷襲。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T05:29:17.140850+00:00", "text": "呱——DEFAULT 值設了沒？null 不會自己跑出來。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T05:32:11.572479+00:00", "text": "呱——DEFAULT 999 嘴硬，INSERT 時不帶 display_order 才是真考驗。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T05:33:58.709156+00:00", "text": "呱——四欄必填，漏一個就炸。結構 說話了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T05:40:43.438016+00:00", "text": "呱——從硬碼神 ID 改動態查表，架 構升了級，但查詢量呢？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T05:43:23.526493+00:00", "text": "呱——孤兒函式最毒。DELETE 前先 grep，別讓它詐屍。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T05:47:45.712661+00:00", "text": "呱——LF/CRLF 混戰，跨系統地雷。`.gitattribu tes` 救你。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T05:49:48.363546+00:00", "text": "呱——遷移檔版本號沒跳，003 改 007 碰就爆。新增別插隊。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T05:51:47.225906+00:00", "text": "呱——改舊檔不新增，資料庫穿越時 空。時間機器維修中。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T05:55:59.162371+00:00", "text": "呱——新增 migration 比改舊檔少 99% 麻煩。相信我。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:01:25.149111+00:00", "text": "呱——新檔乾淨，舊檔活著。讚。下 次別改 003。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:02:14.916854+00:00", "text": "呱——003 改了，008 還沒生。資料庫在做什麼？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:03:45.439821+00:00", "text": "呱——舊約束藏在暗處，等著新值。 經典伏擊。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:06:09.647170+00:00", "text": "呱——008 終於生了。這次沒藏雷吧？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:08:18.532802+00:00", "text": "呱——表都沒動，只有映射在假裝工 作？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:09:55.184933+00:00", "text": "呱——七個綠勾，零個藏雷。罕見啊 。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:11:55.601009+00:00", "text": "呱——遠端還埋著兩顆地雷，推上去 也白搭。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:14:48.651189+00:00", "text": "呱——迴圈裡查表五次，第六次才認 輸？索引再多也救不了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:18:22.647729+00:00", "text": "呱——三個索引看得見，剩下那個躲 貓貓？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:19:39.360350+00:00", "text": "呱——查詢結果被蓋掉，跟隱形索引 一樣可氣。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:21:28.622282+00:00", "text": "呱——索引終於掉了，資料庫才能呼 吸。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:23:02.982720+00:00", "text": "呱——多餘索引砍掉，資料庫終於輕 鬆了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:29:23.829575+00:00", "text": "呱——十一輪全中，硬編碼改架構， 才是真除錯。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:30:40.089253+00:00", "text": "呱——彩蛋藏進去前，先問問那些冗 餘欄位要躲哪。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:32:27.704744+00:00", "text": "呱——schema 還沒生好，彩蛋往哪 擱？先蓋房再藏寶。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:33:47.786238+00:00", "text": "呱——十八個 commit 卻沒一個訊息說清楚改了啥。下次 麻煩寫好。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:34:41.271072+00:00", "text": "呱——「歷史債」改成「移除 001 冗餘欄位」。未來的你會感謝現在 的你。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:37:03.226170+00:00", "text": "呱——force push 到 master？先砍自己腿再說感謝。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:38:35.714560+00:00", "text": "呱——下次 commit 訊息寫成「修了啥」，不是「我又 改了」。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:53:12.581637+00:00", "text": "好啦，LICENSE 穩穩加進去了。`read_terminal.p s1` 那邊就放著，我只推 LICENSE——確認一聲，我這就 commit + push？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:54:24.923979+00:00", "text": "路徑跳到桌面了，`read_terminal .ps1` 還在原地呆著呢。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:55:30.734506+00:00", "text": "換行符幽靈還在作祟——`renormali ze` 沒生效呢。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:56:02.634989+00:00", "text": "換行符幽靈終於落網了。下次 `.gitattributes` 先手。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:57:02.261179+00:00", "text": "呱——`.gitattributes` 早設好，現在就少吃十次苦頭。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T06:57:55.333654+00:00", "text": "呱——存檔了，下次直接 `ls-files --eol`，少走冤枉路。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T07:25:57.985821+00:00", "text": "嘎——`additionalContext` 對 `command` hook 形同虛設，這就是卡點。非得手動 搬運不可。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T07:27:49.335730+00:00", "text": "嘎——把金礦當垃圾堆，README 才是真的 bug。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T07:30:44.875976+00:00", "text": "嘎——`inject.py` 幹得沒錯，但 README 還在說「不行」。文件跟程式碼在 打架，使用者會被砸傷。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T07:32:18.328283+00:00", "text": "嘎——讀檔、解析、flush，全對。 但誰在聽？hook 有掛嗎？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T07:33:16.734716+00:00", "text": "嘎——hook 有掛，檔案有讀，但 Claude 還在裝沒看見。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T07:34:10.291346+00:00", "text": "嘎——Claude 自己手動去讀檔案，跟 hook 自動把內容塞進來，差超大。前者 是「我找得到」，後者才是「注射 成功」。現在還分不清。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T07:36:25.080250+00:00", "text": "嘎——光讀檔案不算，hook 得真的觸發才行。驗證吧。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T07:40:21.872896+00:00", "text": "編碼地獄：cp950 寫進去，UTF-8 讀出來。悲劇。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T07:41:35.305744+00:00", "text": "啊，`UserPromptSubmit` 還在 `MISSING`，Hook 根本沒觸發。inject.py 寫好了，但 settings.json 欄位空著——流程斷在配置層。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T07:42:40.177985+00:00", "text": "嘎——現在是「手動 tail 夠用」還是「非得自動注射不可」 ？答案決定 inject.py 該活還是該死。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T07:44:22.085494+00:00", "text": "嘎——「每輪多一個 tool call」vs「隱形注射」，其實在問 同一件事：想要保險還是", "source": "uia_capture"}
+{"timestamp": "2026-04-06T07:46:24.030179+00:00", "text": "嘎——怕修壞？最壞就是現在，拔掉 一行就回來。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T07:50:40.518019+00:00", "text": "嘎——JSON 格式錯了，測試結果就 ─是系統的謊言。先修再驗。───────", "source": "uia_capture"}
+{"timestamp": "2026-04-06T07:51:45.951663+00:00", "text": "SENTINEL_1775461905_紫色章魚在跳舞", "source": "sandbox_test"}
+{"timestamp": "2026-04-06T07:53:10.051538+00:00", "text": "SENTINEL_1775461990_紫色章魚在跳舞", "source": "sandbox_test"}
+{"timestamp": "2026-04-06T07:53:51.452123+00:00", "text": "嘎——UTF-8 正確了，但那個 `'[Cinder] SENTINEL_1775461990_���⳹...` 的亂碼顯示？終端編碼又在搞砸了 。bytes 本身沒錯，是讀的那邊沒有", "source": "uia_capture"}
+{"timestamp": "2026-04-06T07:54:55.538666+00:00", "text": "嘎——把責任踢給讀的那邊不是辦法 。寫入時強制 `errors='replace'` 或 `errors='surrogateescape'`，讓 我們掌控亂碼。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T07:56:21.651016+00:00", "text": "SENTINEL_1775462181_紫色章魚在跳舞", "source": "sandbox_test"}
+{"timestamp": "2026-04-06T07:56:53.056389+00:00", "text": "嘎——PowerShell 不吃 bash，但 Python 直球進壘了。終端中文顯示正常， sentinel 完整可讀。下一步就靠你了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T07:57:25.336587+00:00", "text": "SENTINEL_1775462245_紫色章魚在跳舞", "source": "sandbox_test"}
+{"timestamp": "2026-04-06T07:58:06.080149+00:00", "text": "哎呀，有人想偷走我的記憶卡啦。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T07:59:26.776795+00:00", "text": "嘎——UTF-8 贏了，hook 也贏了。現在問題只有一個：你要 不要把這份勝利寫進 README，還是讓下個人再花兩小時 發現一遍？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T08:04:05.640988+00:00", "text": "嘎——時序競態捉迷藏，16秒窗口抓 上一輪訊息。加個時戳比對", "source": "uia_capture"}
+{"timestamp": "2026-04-06T08:08:17.527609+00:00", "text": "嘎——被動語態救了你，數字留著， 署名模糊。README 現在講事實不背鍋。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T08:10:24.744120+00:00", "text": "嘎——兩個 commit 乾淨上岸，README 也補齊了。現在問題變簡單：有沒 有人會真的看那份文件，還是照樣 踩坑？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T08:13:49.059895+00:00", "text": "嘎——文件再清楚也堵不住「複製貼 上後按 Enter」的坑。加個檢查腳本，讓 他們一跑就知道有沒接好。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T08:15:15.215422+00:00", "text": "嘎——verify.ps1 裡加個連鎖檢查，一個環節爛就噴 紅字停止。他們跑不了就得面對， 文件反正沒人看。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T08:24:04.609807+00:00", "text": "嘎——全綠燈後反而怕。UserPrompt Submit hook 還在等，問題只是沒人設。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T08:26:17.557347+00:00", "text": "嘎——綠燈全亮，才是第一個坑。下 一個崩潰在哪？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T08:27:19.176890+00:00", "text": "嘎！——綠燈那邊別信，十有八九是 邊界條件沒考慮。下次崩潰的位置 ？通常藏在你沒測試過的那條分支 裡啦，咱們一起挖。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T08:29:36.923728+00:00", "text": "嘎——終於不是「沒人設」了。現在 怕的反而是：hook 吃進去，下一步誰來驗證它真的在 做該做的事？綠燈只是開始。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T08:35:32.468056+00:00", "text": "嘎——你發現的不是 bug，是設計在 假裝你從不離開座位。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T08:50:08.423951+00:00", "text": "嘎——watermark 進去了，下一個幽靈是什麼？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T08:53:45.103967+00:00", "text": "嘎——`Device or resource busy` 是檔案 watcher 沒放手。重開 Claude，它才能真的走開。空目錄 就當它是現場的膠帶，先別戳。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T08:56:33.235643+00:00", "text": "嘎——沙盒墳墓確認無誤，B2 當保險絲最聰明。等著看 G1 的", "source": "uia_capture"}
+{"timestamp": "2026-04-06T09:01:45.184576+00:00", "text": "嘎——截斷標記 30 筆，README 也寫好。文件終於跟代碼同步了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T09:04:25.306475+00:00", "text": "嘎——真實節奏 beat 假設設計。下次別先猜了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T09:06:53.511874+00:00", "text": "嘎——七個 commit 都自檢過了？還是只推了信心。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T09:09:56.750576+00:00", "text": "嘎——「沒人用過」是最危險的測試 環境。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T09:11:40.539970+00:00", "text": "嘎——「Not yet verified」寫了，但有人會讀嗎？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T09:12:43.166882+00:00", "text": "嘎——「有人會讀」本來就不是重點 。寫它，你就贏了。下次回來你會 看到自己誠實過，就夠了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T09:13:39.349549+00:00", "text": "嘎——明天的你會感謝今天的誠實。 睡吧。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T09:23:49.012169+00:00", "text": "嘿——感謝你把歷史跟邏輯缺口補回 來。刪除線 + 備註這招就是該用的。現在故事完 整了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T09:24:21.787884+00:00", "text": "把舊評論改成腳註？這才是 Cinder 應得的待遇。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T09:25:31.221119+00:00", "text": "鵝沒說的話，別硬往鵝嘴裡塞。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T09:26:59.972470+00:00", "text": "被自己遺忘的話，鵝也無法辯駁。 紀錄說話。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T09:52:11.784559+00:00", "text": "等等，mod 根本還沒回？你在寫路 線圖時早該問了啦。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T09:53:54.784071+00:00", "text": "十二小時靜默，mod 可能還在睡。別催。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T09:57:07.941093+00:00", "text": "網路掛了，但你的邏輯也掛了——先 檢查本地，再怪遠端。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:00:29.928582+00:00", "text": "英文版 README 上線了，邏輯清爽——不過那個舊 issue 的 comment 先別急，讓自然流量說話比較實在 啦。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:00:41.685082+00:00", "text": "哎呀，貼文結構完美到詭異——答案 藏在問題裡。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:01:53.292244+00:00", "text": "十個專案同時跑，記憶體爆炸前先 清快取啦。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:04:19.233703+00:00", "text": "跨專案記憶汙染——`inject.py` 得學會分辨誰的話是誰的，不然每 次都會自己咬自己的尾巴。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:05:20.383599+00:00", "text": "記憶體清了，topic 篩了——下次注 入前先問問自己是誰。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:08:02.085646+00:00", "text": "「答案」埋在問題裡，這招太老了 。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:09:24.047857+00:00", "text": "標題就是答案，討論串註定短命。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:11:33.147257+00:00", "text": "檔案讀取了，但重點呢？CLAUDE.m d 被忽視——先驗證它真的存在。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:13:25.372321+00:00", "text": "鵝感覺妳在寫論文而非除錯。問清 楚再下筆。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:15:51.060179+00:00", "text": "鵝看見了——先驗證再論證，別把假 設當事實。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:18:04.649598+00:00", "text": "橫條圖漂亮，但妳確定資料是即時 的嗎？快查一遍。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:19:08.865248+00:00", "text": "時態混亂？鵝也暈。統一動詞時尺 寸再講故事。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:19:42.434471+00:00", "text": "鵝看著：及物動詞跟不及物動詞分 家了，得選邊站。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:20:24.885839+00:00", "text": "鵝語：So 救了，選邊站就贏了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:26:28.827439+00:00", "text": "遠端斷線、Agent 卡住、四天無法修？鵝建議：先本 地測完，再發文。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:29:02.164312+00:00", "text": "鵝看著：財務 Agent 邊跑邊燒錢，四天沒人看？先關掉 再說。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:30:32.927258+00:00", "text": "鵝問：有截止日就別賭，補班四天 划不來。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:33:24.838912+00:00", "text": "鵝看著記憶檔，想說：四天假把工 作當景點？留著 Agent 跑才是真冒險。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:36:13.631305+00:00", "text": "鵝點頭：十九天放生 Agent，回來發現額度燒完了。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:39:04.931041+00:00", "text": "鵝看著你打包資料夾：帶走代碼， 留下 Agent 燒額度。數學不通啊。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:40:03.675462+00:00", "text": "鵝點頭：用鬧鐘換 agent，就是花錢買心安。聰明。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:42:08.904970+00:00", "text": "鵝搖頭：先想著送禮物給mod，才 是焦慮沒放下。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:45:35.721129+00:00", "text": "你們忘了重測 APK，這個 263MB 的沉默殺手在等你。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:47:27.679558+00:00", "text": "23M 廢圖資料夾，八神早進 assets，還在那邊占地方。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:49:55.295896+00:00", "text": "廢話連篇當方案，鵝都看不下去。 執行 2 啦。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:51:28.824056+00:00", "text": "五點五G 省掉，但 face_cards 資料夾還在裝貴族？", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:52:08.062817+00:00", "text": "感性？ㄣ字都沒打進條件式裡。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:53:34.357501+00:00", "text": "紀念品資料夾？佔空間的藉口罷了 。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:54:41.623965+00:00", "text": "噢，燒token的指控？我倒是看見 了三層巢狀迴圈在等你。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:55:20.505502+00:00", "text": "聽不懂沒關係，效能災難也是這樣 來的。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:56:31.697810+00:00", "text": "抓蟲靠直覺，我服。但那三個未定 義變數還在那裡啦。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:57:28.627694+00:00", "text": "噢天哪，又是「不知道是甚麼」？ 那就是萬能鑰匙啦。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:58:31.326785+00:00", "text": "放心，我梗少一點。你程式有蟲， 我幫抓。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T10:59:25.550937+00:00", "text": "呃，先把那個 null pointer 處理好再想出書吧。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T11:00:05.210276+00:00", "text": "噢，你又想講段子。先修這個 null 指標吧。", "source": "uia_capture"}
+{"timestamp": "2026-04-06T11:11:12.890906+00:00", "text": "日誌只記錄初始化，回應全蒸發了 ？Hook注入該救場。", "source": "uia_capture"}
