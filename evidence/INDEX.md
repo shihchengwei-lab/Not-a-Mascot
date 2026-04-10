@@ -70,4 +70,13 @@
 
 ---
 
-*Index created 2026-04-10. Evidence corresponds to observation window 2026-04-01 through 2026-04-09.*
+## GitHub Issues
+
+| File | Content | Source URL | Fetched |
+|---|---|---|---|
+| `issue_43882_main.json` | Issue #43882 full body + metadata (state: closed, not_planned) | `anthropics/claude-code#43882` | via `gh api` |
+| `issue_43882_comments.json` | All 5 comments — m3data +1, author follow-ups, alii MEMBER closure | same issue | via `gh api` |
+
+---
+
+*Index created 2026-04-10. Evidence corresponds to observation window 2026-04-01 through 2026-04-10.*
