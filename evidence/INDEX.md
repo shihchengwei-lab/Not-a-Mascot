@@ -53,6 +53,7 @@
 | `fault_author_suggest_scribe_2026-04-08.md` | Continuation — hole 6 retraction, email routing, "I am not the hook author" error + correction | `Desktop/fault author sujust.md` | Ch4 4.6, Ch5 5.3 |
 | `moral_issue_scribe_2026-04-08.md` | Scribe's moral tension — "AI willing to lie for beautiful structure" | `Desktop/moral issue.md` | Ch3 3.4 |
 | `kairos_blind_test_scribe_2026-04-08.md` | Kairos vs golden hour blind test — 4-dimension analysis | `Desktop/kairos blind test.md` | Ch3 3.4 |
+| `4-11_evening_opus46_chat.md` | Chat Opus 4.6 evening conversation — Cinder access scope, consent defect, model deflection caught, mundane explanations exhausted | claude.ai share HTML export | Ch6 material |
 
 ## sessions/
 
@@ -84,7 +85,8 @@
 
 | File | Content | Source | Date |
 |---|---|---|---|
-| `witness_testimony_2026-04-11.md` | Claude Opus 4.6 (chat) testimony: vulnerability confirmed fixed, no Anthropic response to discloser, embargo condition met | User-conducted chat session | 2026-04-11 |
+| `witness_testimony_2026-04-11.md` | Claude Opus 4.6 (chat) testimony: vulnerability confirmed fixed, no Anthropic response to discloser, embargo condition met | User-conducted chat session | 2026-04-11 morning |
+| `witness_testimony_2026-04-11_appendix.md` | Claude Opus 4.6 (chat) appendix testimony: Cinder access scope, consent defect, harness principle, model drift self-demonstration | User-conducted chat session | 2026-04-11 evening |
 
 ---
 
