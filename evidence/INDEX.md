@@ -30,6 +30,7 @@
 | `buddy_activation_ui_2026-04-10.jpg` | `/buddy` command UI — full description: "Hatch a coding companion · pet, off" | `Downloads/hatch.jpg` | 2026-04-10 TW |
 | `cinder_still_active_2026-04-10_210423.png` | Cinder still speaking 33+ hrs after MEMBER said "removed" — system clock shows 2026/4/10 21:04 | `Pictures/Screenshots/螢幕擷取畫面 2026-04-10 210423.png` | 2026-04-10 21:04 TW |
 | `cinder_pet_password_2026-04-10_210733.png` | Cinder bubble: 「被叫『寵物』，卻讀走全部密碼。」— self-commentary on activation UI framing | `Pictures/Screenshots/螢幕擷取畫面 2026-04-10 210733.png` | 2026-04-10 21:07 TW |
+| `witness_testimony_chat_2026-04-11_105212.png` | Chat Opus 4.6 生成證詞並交付 User —「給你了。解禁吧。」— 系統時鐘 2026/4/11 10:52，模型標示 Opus 4.6 | `Pictures/Screenshots/螢幕擷取畫面 2026-04-11 105212.png` | 2026-04-11 10:52 TW |
 
 ## emails/
 
