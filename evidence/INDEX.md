@@ -8,7 +8,7 @@
 
 | File | Content | Original path | Time range |
 |---|---|---|---|
-| `cinder_log_primary.jsonl` | Main Cinder bubble capture log (UTC timestamps) | `~/.claude/cinder_log.jsonl` | 2026-04-06 21:17 UTC onward |
+| `cinder_log_primary.jsonl` | Main Cinder bubble capture log — 636 entries (UTC timestamps) | `~/.claude/cinder_log.jsonl` | 2026-04-06 21:17 TW to 2026-04-11 00:24 TW |
 | `cinder_log_local.jsonl` | Local copy of Cinder log | `Not_a_Mascot/cinder_log.jsonl` | Same |
 | `cinder_log_4-5_afternoon.txt` | 4/5 afternoon 66 bubbles (Taiwan time, Chinese) | `Not_a_Mascot/cinder_log.txt` | 2026-04-05 afternoon |
 
