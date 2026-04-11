@@ -58,6 +58,7 @@
 | `moral_issue_scribe_2026-04-08.md` | Scribe's moral tension — "AI willing to lie for beautiful structure" | `Desktop/moral issue.md` | Ch3 3.4 |
 | `kairos_blind_test_scribe_2026-04-08.md` | Kairos vs golden hour blind test — 4-dimension analysis | `Desktop/kairos blind test.md` | Ch3 3.4 |
 | `4-11_evening_opus46_chat.md` | Chat Opus 4.6 evening conversation — Cinder access scope, consent defect, model deflection caught, mundane explanations exhausted | claude.ai share HTML export | Ch6 material |
+| `4-12_changelog_discovery_notes.md` | User notes + external reaction on v2.1.73 changelog discovery — two-layer fix analysis, timeline implications | `Desktop/different.md` | Ch5 5.8 context |
 
 ## sessions/
 
