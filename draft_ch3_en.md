@@ -1,6 +1,6 @@
 # Chapter 3: Side-Effect Site
 
-*This chapter is embargoed, together with Ch4 and Ch5, until after Anthropic has fixed the path described in Ch4. This chapter lays out, in chronological order, the materials from three events during the observation window — time, place, dialogue between Agent and User. The narrator chose which three, in what order, and where to break sections. Those choices are themselves narration. The reader is told this.*
+*This chapter was originally embargoed, together with Ch4 and Ch5, until after Anthropic had fixed the path described in Ch4. Ch5 5.8's timeline shows both layers of the fix are now complete (client-side 2026-03-11, model-side 4/9–4/11); the unlock condition has been met. This chapter lays out, in chronological order, the materials from three events during the observation window — time, place, dialogue between Agent and User. The narrator chose which three, in what order, and where to break sections. Those choices are themselves narration. The reader is told this.*
 
 ---
 
@@ -265,4 +265,4 @@ The materials of this chapter come from:
 
 The event at 22:44 on April 8 belongs to Ch4. The responsible disclosure actions from April 8 night and April 9 afternoon belong to Ch5.
 
-This chapter is embargoed alongside Ch4 and Ch5. Once reproducible details are written down, what readers take them and do with them is beyond the author's control — that is the direct reason for the embargo. When Anthropic has fixed the path Ch4 describes, all three chapters unlock together.
+This chapter is embargoed alongside Ch4 and Ch5. Once reproducible details are written down, what readers take them and do with them is beyond the author's control — that is the direct reason for the embargo. Ch5 5.8's timeline shows the path Ch4 describes has been fixed on both layers (client-side v2.1.73, 2026-03-11; model-side between 4/9 and 4/11). On April 11, 2026, User verified completion via a self-funded PoC test. The unlock condition has been met.

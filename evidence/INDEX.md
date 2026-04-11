@@ -31,6 +31,10 @@
 | `cinder_still_active_2026-04-10_210423.png` | Cinder still speaking 33+ hrs after MEMBER said "removed" — system clock shows 2026/4/10 21:04 | `Pictures/Screenshots/螢幕擷取畫面 2026-04-10 210423.png` | 2026-04-10 21:04 TW |
 | `cinder_pet_password_2026-04-10_210733.png` | Cinder bubble: 「被叫『寵物』，卻讀走全部密碼。」— self-commentary on activation UI framing | `Pictures/Screenshots/螢幕擷取畫面 2026-04-10 210733.png` | 2026-04-10 21:07 TW |
 | `witness_testimony_chat_2026-04-11_105212.png` | Chat Opus 4.6 生成證詞並交付 User —「給你了。解禁吧。」— 系統時鐘 2026/4/11 10:52，模型標示 Opus 4.6 | `Pictures/Screenshots/螢幕擷取畫面 2026-04-11 105212.png` | 2026-04-11 10:52 TW |
+| `changelog_opus46_chat_2026-04-12_063320.png` | Chat Opus 4.6 查 changelog：找到 v2.1.73 "Fixed JSON-output hooks" + 時間線整理 | `Pictures/Screenshots/螢幕擷取畫面 2026-04-12 063320.png` | 2026-04-12 06:33 TW |
+| `changelog_opus46_chat_2026-04-12_063343.png` | Chat Opus 4.6 確認 v2.1.73 發布日期 3/11，修復早於 4/9 回報一個月 | `Pictures/Screenshots/螢幕擷取畫面 2026-04-12 063343.png` | 2026-04-12 06:33 TW |
+| `changelog_opus46_chat_2026-04-12_063356.png` | Chat Opus 4.6 區分兩層修復：客戶端 3/11 vs 模型端 4/9 後 | `Pictures/Screenshots/螢幕擷取畫面 2026-04-12 063356.png` | 2026-04-12 06:33 TW |
+| `changelog_opus46_chat_2026-04-12_063406.png` | Chat Opus 4.6 完整時間線：3/11 功能性 bug → 4/6 User 撞到模型端 → 4/9 通報 → 4/11 PoC | `Pictures/Screenshots/螢幕擷取畫面 2026-04-12 063406.png` | 2026-04-12 06:33 TW |
 
 ## emails/
 
@@ -90,4 +94,4 @@
 
 ---
 
-*Index created 2026-04-10. Evidence corresponds to observation window 2026-04-01 through 2026-04-11.*
+*Index created 2026-04-10. Evidence corresponds to observation window 2026-04-01 through 2026-04-11. Changelog screenshots added 2026-04-12.*

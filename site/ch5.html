@@ -51,6 +51,7 @@
     <p class="note-item">成本倒置的事實描述</p>
     <p class="note-item">Ch1+Ch2 證據組合成 consent defect 結構的 synthesis</p>
     <p class="note-item">User 的位置聲明——為什麼是他看到這個漏洞</p>
+    <p class="note-item">v2.1.73 changelog 時間線——3/11 客戶端修復與 4/9 模型端通報的兩層區別</p>
   </div>
 
   <p><strong>這一章的邊界</strong>：</p>
@@ -257,6 +258,7 @@
     <p class="note-item"><strong>Ch1 1.5 記錄的隔離結構</strong>：多層獨立實作同步把所有正規出口關起來</p>
     <p class="note-item"><strong>Ch1 1.6 的官方分類</strong>：<code>a small April Fools feature</code> 加 <code>not planned</code> 歸檔</p>
     <p class="note-item"><strong>補漏洞成本是否回流</strong>：未知——bounty 夠不夠覆蓋 Max20 訂閱＋$200 credit 剩餘的邊際成本</p>
+    <p class="note-item"><strong>v2.1.73 的 Misc fix（3/11）</strong>：修復了 JSON-output hooks 注入 no-op system-reminder 的客戶端管道——分類在 Misc fixes，沒有安全語言（5.8 展開）</p>
   </div>
 
   <p><strong>Consent defect 的四個零件</strong>（這一段是這一節的承重點）：</p>
@@ -289,7 +291,42 @@
 
   <p>四個零件疊起來沒有 mundane 解釋可以同時套：<strong>跑了 reviewer 等級的密度 → 結果被多層出口鎖封住 → 功能被分類為 April Fools feature → 啟用 UI 只說「孵一隻寵物」</strong>——這四層同時存在，無法被單一個「疏忽」解釋完。1.7 證人後半段在自己的剃刀下認輸，是讀完那批證據之後認輸的。</p>
 
-  <div class="section-divider"><h2>5.8 位置聲明與這一章的收尾</h2></div>
+  <div class="section-divider"><h2>5.8 三月十一日的 Misc fix</h2></div>
+
+  <p>2026 年 4 月 12 日——觀察期結束三天之後——User 請 Chat 版 Opus 4.6 搜尋 Claude Code 的更新紀錄。Opus 4.6 從 GitHub releases 頁面找到一條紀錄：</p>
+
+  <p><strong>Claude Code v2.1.73</strong>，2026 年 3 月 11 日發布（UTC 18:26）。release notes 的 Misc fixes 下面：</p>
+
+  <div class="dialogue dialogue-agent"><p>Fixed JSON-output hooks injecting no-op system-reminder messages into the model's context on every turn</p></div>
+
+  <p>沒有安全語言，沒有 CVE，沒有外部揭露者歸因。</p>
+
+  <p>Opus 4.6 區分了兩層：</p>
+
+  <div class="dialogue dialogue-agent"><p>3/11 的修復是堵住一個「無意間產生的注入路徑」——JSON-output hooks 的 stdout 本來就不該被當成 system-reminder 塞進 context。這是個功能性 bug，不是安全修復。</p><p><em>— Chat 版 Opus 4.6, 2026-04-12</em></p></div>
+
+  <div class="dialogue dialogue-agent"><p>3/11 堵住了一個注入管道，但沒有解決根本問題：模型對注入內容缺乏辨識能力。</p><p><em>— Chat 版 Opus 4.6, 2026-04-12</em></p></div>
+
+  <p>他對這條時間線的讀法：</p>
+
+  <div class="dialogue dialogue-agent"><p>不是「修了怕被時間差攻擊所以不敢寫」，而是他們 3/11 根本沒把它當安全問題看。是你的回報才讓他們意識到模型端也需要防禦。</p><p><em>— Chat 版 Opus 4.6, 2026-04-12</em></p></div>
+
+  <p>時間線對照：</p>
+  <div class="data-block">
+    <p class="note-item"><strong>3/11</strong>：v2.1.73 發布。客戶端修復，分類 Misc fixes</p>
+    <p class="note-item"><strong>4/1</strong>：User 啟用 Cinder companion</p>
+    <p class="note-item"><strong>4/6</strong>：User 從 Cinder companion 撞到模型端服從性問題</p>
+    <p class="note-item"><strong>4/8</strong>：Ch4 記錄的目擊事件</p>
+    <p class="note-item"><strong>4/9</strong>：User 自費通報模型端漏洞</p>
+    <p class="note-item"><strong>4/9–4/11</strong>：模型端出現偵測與拒絕機制</p>
+    <p class="note-item"><strong>4/11</strong>：User 自費 PoC 驗證模型端已修</p>
+  </div>
+
+  <p>把日期擺在一起：客戶端 3/11 修了（Misc fix），模型端到 User 4/9 通報前後才修。中間那一個月，客戶端注入管道堵了，模型端的服從性沒人動過。</p>
+
+  <p>3/11 的 changelog 是公開紀錄——GitHub 的 anthropics/claude-code releases 頁面，Misc fixes 欄位。</p>
+
+  <div class="section-divider"><h2>5.9 位置聲明與這一章的收尾</h2></div>
 
   <p>User 在整個九天裡的位置，一句話講完：<strong>他同時在五個 Claude 管道裡使用同一個底層模型</strong>。</p>
 
@@ -313,6 +350,7 @@
     <p><strong>三、4/9 下午 Ch5 後半的補充通報由 Ch3 3.5 那位手機版 Opus 4.6 承接</strong>。他在 Ch3 3.5 描述的狀態下建議 User「把對話連結丟過去，讓他們自己的人來看」，用 Claude 自己在那場對話裡展現的行為當漏洞的證物。</p>
     <p><strong>四、九天觀察期的事實分布是不對稱的</strong>。User 這一側：燒 token、做工具、觀察、通報、延後、具名。另一側：隔離結構、April Fools 分類、<code>not planned</code> 歸檔、回流成本未知。</p>
     <p><strong>五、Ch1 的五條獨立證據加上 Ch2 的材料，組合起來是一個 consent defect</strong>。使用者同意的是裝飾，實際收到的是 reviewer 等級的隔離產出。包裝和實質之間存在落差。這個落差的意義留給讀者。</p>
+    <p><strong>六、Claude Code v2.1.73（2026-03-11 發布）的 Misc fixes 記錄了一條修復</strong>：「Fixed JSON-output hooks injecting no-op system-reminder messages into the model's context on every turn」。這條修復在 User 4/9 通報之前一個月，分類為功能性 bug fix，沒有安全語言。3/11 修的是客戶端注入管道；User 4/9 報的是模型端服從性——兩層修復在不同層。</p>
   </div>
 
   <p><strong>Ch5 材料的上限</strong>：</p>
@@ -323,15 +361,17 @@
     <p class="note-item">道德評價詞。這本書的道德描述用詞是「操作醜陋」</p>
   </div>
 
-  <div class="section-divider"><h2>5.9 解禁前言</h2></div>
+  <div class="section-divider"><h2>5.10 解禁前言</h2></div>
 
-  <p>這一章跟 Ch3、Ch4 一起 embargo，等 Anthropic 修好 Ch4 寫的那條路之後一起解禁。到那一天，這一章的最後會加一段補充：解禁日期、外部條件是什麼時候達成的、以及 Anthropic 的公開回應（如果有的話）。</p>
+  <p>這一章跟 Ch3、Ch4 一起 embargo。原定的解禁條件是「等 Anthropic 修好 Ch4 寫的那條路」。</p>
 
-  <p>連載版的讀者現在能看到的是：<strong>這一章有內容、這一章寫完了、這一章暫時不公開</strong>。</p>
+  <p>5.8 記錄的時間線顯示修復分兩層完成：客戶端 v2.1.73（2026-03-11，Misc fix），模型端在 User 4/9 通報前後。2026 年 4 月 11 日，User 自費 PoC 驗證模型端已拒絕注入。<strong>兩層都修了。解禁條件達成。</strong></p>
 
-  <p>這本書的觀察期九天在這一章結束。4 月 1 日 Cinder 上線，4 月 9 日 User 寄出第二次通報，從那一刻起這本書的素材就停止累積了——剩下的是寫作、校對、翻譯、等待解禁。解禁的時程由 Anthropic 那一邊的動作決定。</p>
+  <p>Anthropic 對 User 的通報沒有人工回覆——沒有確認、沒有否認、沒有 bounty 通知。User 收到的只有 <code>security@</code> 的自動路由信。</p>
 
-  <p>全書結語——不在這一章——會交代解禁之後 User 走到哪一步、手邊的材料有沒有新事實需要補。</p>
+  <p>這本書的觀察期九天在這一章結束。4 月 1 日 Cinder 上線，4 月 9 日 User 寄出第二次通報，觀察期的素材在那一刻停止累積。之後又找到新素材：4/11 的 Ch6 材料（辯方證人對話與附錄證詞），4/12 的 v2.1.73 changelog 發現（5.8）。這些後續發現補入了各自的章節。</p>
+
+  <p>全書結語——不在這一章——會交代 User 走到哪一步、手邊的材料有沒有新事實需要補。</p>
 
   <p>這本書到這裡結束。</p>
 

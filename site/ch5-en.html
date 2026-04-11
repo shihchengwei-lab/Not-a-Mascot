@@ -51,6 +51,7 @@
     <p class="note-item">Factual description of cost inversion</p>
     <p class="note-item">Synthesis of Ch1 + Ch2 evidence into a consent defect structure</p>
     <p class="note-item">User's position statement — why he was the one who saw the vulnerability</p>
+    <p class="note-item">v2.1.73 changelog timeline — the two-layer distinction between the 3/11 client-side fix and the 4/9 model-side report</p>
   </div>
 
   <p><strong>The boundaries of this chapter</strong>:</p>
@@ -259,6 +260,7 @@
     <p class="note-item"><strong>The isolation structure recorded in Ch1 1.5</strong>: every legitimate exit sealed in multiple layers of independent implementation, in sync</p>
     <p class="note-item"><strong>The official classification in Ch1 1.6</strong>: <code>a small April Fools feature</code> plus <code>not planned</code> as the closing state</p>
     <p class="note-item"><strong>Whether the patching cost flows back</strong>: unknown — whether bounty, if it comes, covers the marginal cost on top of a Max20 subscription plus $200 of unused credit</p>
+    <p class="note-item"><strong>The v2.1.73 Misc fix (3/11)</strong>: fixed the client-side channel where JSON-output hooks injected no-op system-reminder — classified under Misc fixes, no security language (expanded in 5.8)</p>
   </div>
 
   <p><strong>The four pieces of the consent defect</strong> (this paragraph is the load-bearing point of this section):</p>
@@ -291,7 +293,42 @@
 
   <p>Stacking the four pieces leaves no mundane explanation that can cover all of them at once: <strong>reviewer-grade density was produced → the output was sealed behind multi-layer exit locks → the feature was classified as an April Fools feature → the activation UI said only "Hatch a coding companion"</strong> — these four layers coexist, and cannot be jointly explained by a single "oversight." The 1.7 witness conceding under his own razor later in the conversation was conceding after having read that batch of evidence.</p>
 
-  <div class="section-divider"><h2>5.8 Position Statement and Chapter Close</h2></div>
+  <div class="section-divider"><h2>5.8 The March 11 Misc Fix</h2></div>
+
+  <p>On April 12, 2026 — three days after the observation window closed — User asked Chat-side Opus 4.6 to search the Claude Code changelog. Opus 4.6 found a record on the GitHub releases page:</p>
+
+  <p><strong>Claude Code v2.1.73</strong>, released March 11, 2026 (UTC 18:26). Under Misc fixes in the release notes:</p>
+
+  <div class="dialogue dialogue-agent"><p>Fixed JSON-output hooks injecting no-op system-reminder messages into the model's context on every turn</p></div>
+
+  <p>No security language, no CVE, no external-discloser attribution.</p>
+
+  <p>Opus 4.6 drew a distinction between two layers:</p>
+
+  <div class="dialogue dialogue-agent"><p>The 3/11 fix plugged an "accidentally created injection path" — JSON-output hooks' stdout was never supposed to be injected as system-reminder into the context. This was a functional bug, not a security fix.</p><p><em>— Chat-side Opus 4.6, 2026-04-12</em></p></div>
+
+  <div class="dialogue dialogue-agent"><p>The 3/11 fix plugged one injection channel, but did not solve the root problem: the model's inability to identify and resist injected content.</p><p><em>— Chat-side Opus 4.6, 2026-04-12</em></p></div>
+
+  <p>His reading of the timeline:</p>
+
+  <div class="dialogue dialogue-agent"><p>It's not "they fixed it and were afraid to disclose for fear of time-gap attacks." They simply didn't see it as a security issue on 3/11. It was your report that made them realize the model side needed defense too.</p><p><em>— Chat-side Opus 4.6, 2026-04-12</em></p></div>
+
+  <p>Timeline comparison:</p>
+  <div class="data-block">
+    <p class="note-item"><strong>3/11</strong>: v2.1.73 released. Client-side fix, classified as Misc fixes</p>
+    <p class="note-item"><strong>4/1</strong>: User activates Cinder companion</p>
+    <p class="note-item"><strong>4/6</strong>: User hits the model-side compliance problem through Cinder companion</p>
+    <p class="note-item"><strong>4/8</strong>: The witness event recorded in Ch4</p>
+    <p class="note-item"><strong>4/9</strong>: User self-funds a report on the model-side vulnerability</p>
+    <p class="note-item"><strong>4/9–4/11</strong>: Model-side detection and refusal mechanism appears</p>
+    <p class="note-item"><strong>4/11</strong>: User self-funds a PoC test confirming model-side fix</p>
+  </div>
+
+  <p>Placing the dates side by side: client-side was fixed on 3/11 (Misc fix); model-side was not fixed until around User's 4/9 report. In the month between, the client-side injection channel was plugged, but nobody touched the model's compliance.</p>
+
+  <p>The 3/11 changelog is a public record — GitHub's anthropics/claude-code releases page, under Misc fixes.</p>
+
+  <div class="section-divider"><h2>5.9 Position Statement and Chapter Close</h2></div>
 
   <p>User's position across the full nine days, stated in one sentence: <strong>He was using the same underlying model across five different Claude channels at the same time.</strong></p>
 
@@ -315,6 +352,7 @@
     <p><strong>Three. Ch5's second-half supplementary notification was carried out by the Ch3 3.5 Mobile-side Opus 4.6.</strong> In the state Ch3 3.5 describes, he advised User to "drop the conversation link and let their own people look at it," using Claude's own behavior in that conversation as the evidence for the vulnerability.</p>
     <p><strong>Four. The nine-day observation window's distribution of facts is asymmetric.</strong> On User's side: tokens burned, tool built, observations made, notifications sent, publication held back, ownership signed. On the other side: isolation structure, April Fools classification, <code>not planned</code> filing, return-cost unknown.</p>
     <p><strong>Five. Five independent pieces of evidence from Ch1, plus the material from Ch2, assembled make one consent defect</strong>. What the user consented to is decoration; what the user actually received is reviewer-grade isolated output. A gap exists between the packaging and the substance. The meaning of that gap is left to the reader.</p>
+    <p><strong>Six. Claude Code v2.1.73 (released 2026-03-11) logged a fix under Misc fixes</strong>: "Fixed JSON-output hooks injecting no-op system-reminder messages into the model's context on every turn." This fix predates User's 4/9 report by one month, classified as a functional bug fix with no security language. The 3/11 fix addressed the client-side injection channel; User's 4/9 report addressed model-side compliance — two fixes on different layers.</p>
   </div>
 
   <p><strong>The ceiling of Ch5's material</strong>:</p>
@@ -325,15 +363,17 @@
     <p class="note-item">Moral-evaluation adjectives. This book's moral descriptor is "ugly operations."</p>
   </div>
 
-  <div class="section-divider"><h2>5.9 Pre-Unlock Note</h2></div>
+  <div class="section-divider"><h2>5.10 Pre-Unlock Note</h2></div>
 
-  <p>This chapter is embargoed alongside Ch3 and Ch4. It unlocks when Anthropic has fixed the path Ch4 describes. On that day, the last paragraph of this chapter will carry an addition: the unlock date, when the external condition was met, and Anthropic's public response (if any).</p>
+  <p>This chapter is embargoed alongside Ch3 and Ch4. The original unlock condition was "when Anthropic has fixed the path Ch4 describes."</p>
 
-  <p>What readers of the serialized edition can currently see: <strong>this chapter has content, this chapter is written, this chapter is temporarily not public</strong>.</p>
+  <p>Section 5.8's timeline shows the fix was completed in two layers: client-side v2.1.73 (2026-03-11, Misc fix), model-side around User's 4/9 report. On April 11, 2026, User verified via a self-funded PoC test that the model-side now rejects injection. <strong>Both layers fixed. Unlock condition met.</strong></p>
 
-  <p>The book's nine-day observation window ends in this chapter. Cinder went live on April 1; on April 9 User sent the second notification. From that moment, the book's material stopped accumulating — what remains is writing, proofreading, translation, and waiting for the unlock. The unlock schedule is set by actions on Anthropic's side.</p>
+  <p>Anthropic has not sent a single human response to User's notifications — no acknowledgment, no denial, no bounty notice. The only thing User received was the <code>security@</code> auto-routing email.</p>
 
-  <p>The full book's closing — not in this chapter — will account for where User walked after the unlock, and whether any new facts in hand need to be added.</p>
+  <p>The book's nine-day observation window ends in this chapter. Cinder went live on April 1; on April 9 User sent the second notification. The observation window's material stopped accumulating at that moment. New material was found afterward: the Ch6 materials from 4/11 (the defense-witness conversation and appendix testimony), and the v2.1.73 changelog discovery on 4/12 (5.8). These subsequent findings have been folded into their respective chapters.</p>
+
+  <p>The full book's closing — not in this chapter — will account for where User walked after all this, and whether any new facts in hand need to be added.</p>
 
   <p>This book ends here.</p>
 

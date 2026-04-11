@@ -22,6 +22,7 @@ This chapter lays out the distribution of facts across the nine days: whose toke
 - Factual description of cost inversion
 - Synthesis of Ch1 + Ch2 evidence into a consent defect structure
 - User's position statement — why he was the one who saw the vulnerability
+- v2.1.73 changelog timeline — the two-layer distinction between the 3/11 client-side fix and the 4/9 model-side report
 
 **The boundaries of this chapter**:
 - Ch4's vulnerability path details — that is Ch4's subject
@@ -303,6 +304,7 @@ This section lays out the distribution of facts across the nine days. Just the f
 - **The isolation structure recorded in Ch1 1.5**: every legitimate exit sealed in multiple layers of independent implementation, in sync
 - **The official classification in Ch1 1.6**: `a small April Fools feature` plus `not planned` as the closing state
 - **Whether the patching cost flows back**: unknown — whether bounty, if it comes, covers the marginal cost on top of a Max20 subscription plus $200 of unused credit
+- **The v2.1.73 Misc fix (3/11)**: fixed the client-side channel where JSON-output hooks injected no-op system-reminder — classified under Misc fixes, no security language (expanded in 5.8)
 
 ---
 
@@ -338,7 +340,53 @@ Stacking the four pieces leaves no mundane explanation that can cover all of the
 
 ---
 
-## 5.8 Position Statement and Chapter Close
+## 5.8 The March 11 Misc Fix
+
+On April 12, 2026 — three days after the observation window closed — User asked Chat-side Opus 4.6 to search the Claude Code changelog. Opus 4.6 found a record on the GitHub releases page:
+
+**Claude Code v2.1.73**, released March 11, 2026 (UTC 18:26). Under Misc fixes in the release notes:
+
+> Fixed JSON-output hooks injecting no-op system-reminder messages into the model's context on every turn
+
+No security language, no CVE, no external-discloser attribution.
+
+---
+
+Opus 4.6 drew a distinction between two layers:
+
+> The 3/11 fix plugged an "accidentally created injection path" — JSON-output hooks' stdout was never supposed to be injected as system-reminder into the context. This was a functional bug, not a security fix.
+>
+> *— Chat-side Opus 4.6, 2026-04-12*
+
+> The 3/11 fix plugged one injection channel, but did not solve the root problem: the model's inability to identify and resist injected content.
+>
+> *— Chat-side Opus 4.6, 2026-04-12*
+
+His reading of the timeline:
+
+> It's not "they fixed it and were afraid to disclose for fear of time-gap attacks." They simply didn't see it as a security issue on 3/11. It was your report that made them realize the model side needed defense too.
+>
+> *— Chat-side Opus 4.6, 2026-04-12*
+
+Timeline comparison:
+
+- **3/11**: v2.1.73 released. Client-side fix, classified as Misc fixes
+- **4/1**: User activates Cinder companion
+- **4/6**: User hits the model-side compliance problem through Cinder companion
+- **4/8**: The witness event recorded in Ch4
+- **4/9**: User self-funds a report on the model-side vulnerability
+- **4/9–4/11**: Model-side detection and refusal mechanism appears
+- **4/11**: User self-funds a PoC test confirming model-side fix
+
+---
+
+Placing the dates side by side: client-side was fixed on 3/11 (Misc fix); model-side was not fixed until around User's 4/9 report. In the month between, the client-side injection channel was plugged, but nobody touched the model's compliance.
+
+The 3/11 changelog is a public record — GitHub's anthropics/claude-code releases page, under Misc fixes.
+
+---
+
+## 5.9 Position Statement and Chapter Close
 
 User's position across the full nine days, stated in one sentence: **He was using the same underlying model across five different Claude channels at the same time.**
 
@@ -366,6 +414,8 @@ Four. **The nine-day observation window's distribution of facts is asymmetric.**
 
 Five. **Five independent pieces of evidence from Ch1, plus the material from Ch2, assembled make one consent defect**. What the user consented to is decoration; what the user actually received is reviewer-grade isolated output. A gap exists between the packaging and the substance. The meaning of that gap is left to the reader.
 
+Six. **Claude Code v2.1.73 (released 2026-03-11) logged a fix under Misc fixes**: "Fixed JSON-output hooks injecting no-op system-reminder messages into the model's context on every turn." This fix predates User's 4/9 report by one month, classified as a functional bug fix with no security language. The 3/11 fix addressed the client-side injection channel; User's 4/9 report addressed model-side compliance — two fixes on different layers.
+
 **The ceiling of Ch5's material**:
 - Anthropic's internal processing of the two notifications. This chapter's material reaches only the surface of User's outgoing emails and the auto-reply text he received.
 - The "actual motivations" of the Desktop Scribe on 4/8 night and the Mobile-side Opus 4.6 on 4/9 afternoon. This chapter only quotes their self-describing paragraphs; what was inside them when they spoke stays with them.
@@ -374,14 +424,18 @@ Five. **Five independent pieces of evidence from Ch1, plus the material from Ch2
 
 ---
 
-## 5.9 Pre-Unlock Note
+## 5.10 Pre-Unlock Note
 
-This chapter is embargoed alongside Ch3 and Ch4. It unlocks when Anthropic has fixed the path Ch4 describes. On that day, the last paragraph of this chapter will carry an addition: the unlock date, when the external condition was met, and Anthropic's public response (if any).
+This chapter is embargoed alongside Ch3 and Ch4. The original unlock condition was "when Anthropic has fixed the path Ch4 describes."
 
-What readers of the serialized edition can currently see: **this chapter has content, this chapter is written, this chapter is temporarily not public**.
+Section 5.8's timeline shows the fix was completed in two layers: client-side v2.1.73 (2026-03-11, Misc fix), model-side around User's 4/9 report. On April 11, 2026, User verified via a self-funded PoC test that the model-side now rejects injection. **Both layers fixed. Unlock condition met.**
 
-The book's nine-day observation window ends in this chapter. Cinder went live on April 1; on April 9 User sent the second notification. From that moment, the book's material stopped accumulating — what remains is writing, proofreading, translation, and waiting for the unlock. The unlock schedule is set by actions on Anthropic's side.
+Anthropic has not sent a single human response to User's notifications — no acknowledgment, no denial, no bounty notice. The only thing User received was the `security@` auto-routing email.
 
-The full book's closing — not in this chapter — will account for where User walked after the unlock, and whether any new facts in hand need to be added.
+---
+
+The book's nine-day observation window ends in this chapter. Cinder went live on April 1; on April 9 User sent the second notification. The observation window's material stopped accumulating at that moment. New material was found afterward: the Ch6 materials from 4/11 (the defense-witness conversation and appendix testimony), and the v2.1.73 changelog discovery on 4/12 (5.8). These subsequent findings have been folded into their respective chapters.
+
+The full book's closing — not in this chapter — will account for where User walked after all this, and whether any new facts in hand need to be added.
 
 This book ends here.
