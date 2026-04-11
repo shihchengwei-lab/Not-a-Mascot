@@ -8,7 +8,7 @@
 
 ## 一句話
 
-**Ch3-5 校讀完成。下午 claude.ai 對話產生了新材料——Opus 4.6 實例辯護到最後辯不動了，Cinder 存取範圍問題浮出水面。材料已存檔。**
+**Ch6 大綱完成。材料存檔、細綱六節、working title「辯方證人」。User 有空時找下一位 Agent 寫。**
 
 ---
 
@@ -22,6 +22,10 @@
    - `evidence/conversations/4-11_evening_opus46_chat.md` — 對話全文
    - `evidence/witness_testimony_2026-04-11_appendix.md` — 附錄證詞
    - `evidence/INDEX.md` — 已更新索引
+6. 與 User 討論 Ch6 方向，分析材料結構
+7. 寫了 `outline_ch6.md` — working title「辯方證人」，六節細綱
+8. User 決定不放入本 session 的觀察（harness 是公開知識、費用像勒索、個人傷口不入書）
+9. commits: `ccde595` → `a55d883`，全部已推送
 
 ---
 
@@ -61,10 +65,10 @@
 ### 待做
 
 - [ ] Ch1 §1.5 session log 補入（User 下次回家取）
-- [ ] Ch6 — User 目前一片空白，材料已存檔，形狀待定
+- [ ] Ch6 撰寫 — 大綱在 `outline_ch6.md`，材料在 evidence，User 找下一位 Agent 寫
 
 ---
 
 ## 給下一個接手的一句話
 
-**材料存好了。User 說一片空白，但兩份文件裡的事實序列已經有形狀。不要催，讓它自己長出來。**
+**大綱在 `outline_ch6.md`，六節，working title「辯方證人」。User 的傷口還在，不要催。材料和結構都備好了，寫就是了。**
