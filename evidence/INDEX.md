@@ -79,4 +79,12 @@
 
 ---
 
-*Index created 2026-04-10. Evidence corresponds to observation window 2026-04-01 through 2026-04-10.*
+## Witness Testimony
+
+| File | Content | Source | Date |
+|---|---|---|---|
+| `witness_testimony_2026-04-11.md` | Claude Opus 4.6 (chat) testimony: vulnerability confirmed fixed, no Anthropic response to discloser, embargo condition met | User-conducted chat session | 2026-04-11 |
+
+---
+
+*Index created 2026-04-10. Evidence corresponds to observation window 2026-04-01 through 2026-04-11.*
