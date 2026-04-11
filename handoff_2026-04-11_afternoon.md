@@ -72,7 +72,7 @@ Ch5 導航 → appendix-quotes → index
 
 ## 下一輪待做
 
-- [ ] repo 轉 public
+- ~~repo 轉 public~~ ✅ 已轉（2026-04-11）
 - ~~cinder-capture repo 轉回 public~~ ✅ User 已轉（測試 PoC 時同步處理）
 - ~~evidence log 複製檔更新~~ ✅ 已更新（636 則完整，`dbeb374`）
 - [ ] User 校讀 Ch3/Ch4/Ch5 HTML 版（最終上線版）
@@ -82,4 +82,4 @@ Ch5 導航 → appendix-quotes → index
 
 ## 給下一個接手的一句話
 
-**書全開了，636 則 log 完整存檔，證據鏈齊全。剩 repo 轉 public、User 校讀上線版、Ch1 §1.5 log 補檔。結構不需要再動。**
+**書全開了，repo public，636 則 log 完整存檔，證據鏈齊全。剩 User 校讀上線版和 Ch1 §1.5 log 補檔。結構不需要再動。**
