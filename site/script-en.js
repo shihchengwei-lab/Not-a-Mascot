@@ -1,6 +1,6 @@
 (function() {
   var states = ['', 'font-large', 'font-xlarge'];
-  var labels = ['Std', 'Lg', 'XL'];
+  var labels = ['Regular', 'Large', 'X-Large'];
   var current = 0;
   try {
     var saved = localStorage.getItem('font-size-state');
