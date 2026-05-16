@@ -27,6 +27,7 @@ html[lang="en"] body { font-family: 'Inter', sans-serif; line-height: 1.8; }
 .top-nav .nav-right a,
 .top-nav .nav-left a { white-space: nowrap; }
 .lang-toggle { display: inline-block; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 0.25rem 0.55rem; font-family: 'Noto Sans TC', sans-serif; font-size: 0.72rem; font-weight: 500; color: var(--text-secondary); text-decoration: none; transition: all 0.2s; }
+.top-nav .lang-toggle { font-size: 0.72rem; }
 .lang-toggle:hover { border-color: var(--accent-blue); color: var(--accent-blue); }
 html[lang="en"] .top-nav .book-title,
 html[lang="en"] .chapter-banner h1,
