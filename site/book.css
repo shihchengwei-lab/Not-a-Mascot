@@ -73,6 +73,11 @@
    .signature        文末署名與日期：靠右、次要字色。
    .chapter-epigraph 章首題詞：放在 .chapter-banner 內，次要字色、斜體；.epigraph-attr 是出處，另起一行。
 
+   【冷讀的元件】（Cold_Read 使用；其他書沒用到，規則放著不影響）
+   hr.section-break  章內段落分隔線：寬度四成二的細灰線，置中。
+   .book-list-item   書單項目（附錄用）：左邊縮出一格放 .bullet 圓點；.bullet 次要字色、粗體。
+   .list-cont        書單項目的續行（通常是網址）：縮排與項目文字對齊、次要字色、可任意處斷行。
+
    【頁尾導覽的內容】
    一般章節：「← 上一章」「目錄」「下一章 →」（英文：「← Previous」「Contents」「Next →」）。
    前言只放「目錄」「下一章 →」；後記只放「← 上一章」「目錄」。
@@ -772,4 +777,36 @@ tr:last-child td {
   font-size: 0.78em;
   font-style: normal;
   letter-spacing: 0.08em;
+}
+
+/* ==========================================================================
+   冷讀的元件（Cold_Read）
+   ========================================================================== */
+
+/* 章內段落分隔線：比一般 hr 窄，置中 */
+hr.section-break {
+  width: 42%;
+  margin: 2.4em auto;
+}
+
+/* 書單項目：圓點放在縮排處，項目文字整塊對齊 */
+.book-list-item {
+  position: relative;
+  padding-left: 1.15em;
+  margin-bottom: 0.65em;
+}
+
+.book-list-item .bullet {
+  position: absolute;
+  left: 0;
+  color: var(--text-secondary);
+  font-weight: 700;
+}
+
+/* 書單項目的續行：與項目文字對齊，往上收一點接在項目下面 */
+.list-cont {
+  margin-top: -0.35em;
+  margin-left: 1.15em;
+  color: var(--text-secondary);
+  overflow-wrap: anywhere;
 }
