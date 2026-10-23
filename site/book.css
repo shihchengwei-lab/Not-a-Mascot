@@ -78,6 +78,18 @@
    .book-list-item   書單項目（附錄用）：左邊縮出一格放 .bullet 圓點；.bullet 次要字色、粗體。
    .list-cont        書單項目的續行（通常是網址）：縮排與項目文字對齊、次要字色、可任意處斷行。
 
+   【Agent 手冊的元件】（Agent_hand_book101 使用；其他書沒用到，規則放著不影響）
+   表格              .data-table、.diag-table、.compare-table、.contrast-table 四種都吃上面的通用表格樣式（只有橫向細線）；
+                     寬表格外面包 .table-wrap 或 .diag-table-wrap，在外框內橫向捲動，不撐破頁面；
+                     .contrast-table 第一欄粗體。
+   .skeleton-box     範本框：灰底、等寬字、保留換行；內含 pre 時 pre 不再套自己的底色與內距。
+   .red-line-box     紅線方框：灰底加粗墨色左線（原本是紅底紅框，灰階下靠粗左線強調）。
+   .part-closing     每部結尾框：次要字色、左邊一條灰線。
+   .sub-section、.sub-heading  章內小標題（h3）：粗體，左邊一條墨色細線。
+   .part-heading     目錄頁的部標題：內含 .part-label（小字）與 .part-title（粗體）；下方一條細線。
+   .toc-item         目錄頁條目，外觀同 .toc-card；內含 .label、.title、.toc-subtitle（次要字色小字）。
+   .tagline、.author-credit  目錄頁書名下的一句話與作者署名：置中、次要字色。
+
    【頁尾導覽的內容】
    一般章節：「← 上一章」「目錄」「下一章 →」（英文：「← Previous」「Contents」「Next →」）。
    前言只放「目錄」「下一章 →」；後記只放「← 上一章」「目錄」。
@@ -628,30 +640,35 @@ tr:last-child td {
   margin-bottom: 2.4em;
 }
 
-.toc-card {
+.toc-card,
+.toc-item {
   display: block;
   padding: 0.9em 0;
   border-bottom: 1px solid var(--border-hairline);
   text-decoration: none;
 }
 
-.toc-card:first-of-type {
+.toc-card:first-of-type,
+.toc-item:first-of-type {
   border-top: 1px solid var(--border-hairline);
 }
 
-.toc-card .toc-label {
+.toc-card .toc-label,
+.toc-item .label {
   display: block;
   font-size: 0.78em;
   letter-spacing: 0.08em;
   color: var(--text-secondary);
 }
 
-.toc-card .toc-title {
+.toc-card .toc-title,
+.toc-item .title {
   display: block;
   font-weight: 700;
 }
 
-.toc-card:hover .toc-title {
+.toc-card:hover .toc-title,
+.toc-item:hover .title {
   text-decoration: underline;
   text-underline-offset: 0.22em;
   text-decoration-thickness: 1px;
@@ -809,4 +826,137 @@ hr.section-break {
   margin-left: 1.15em;
   color: var(--text-secondary);
   overflow-wrap: anywhere;
+}
+
+/* ==========================================================================
+   Agent 手冊的元件（Agent_hand_book101）
+   ========================================================================== */
+
+/* 寬表格在外框內橫向捲動；min-width 讓欄位不被擠成一字一行 */
+.table-wrap,
+.diag-table-wrap {
+  overflow-x: auto;
+  margin: 1.6em 0;
+}
+
+.table-wrap table,
+.diag-table-wrap table {
+  margin: 0;
+}
+
+/* 最小寬度只在外框裡生效；沒有外框的表格（例如 ch04）維持通用表格，欄內文字折行 */
+.table-wrap .data-table {
+  min-width: 760px;
+}
+
+.diag-table td {
+  min-width: 120px;
+}
+
+.contrast-table td:first-child {
+  font-weight: 700;
+}
+
+/* 範本框與紅線方框：灰底；裡面的 pre 不再疊第二層底色與內距 */
+.skeleton-box,
+.red-line-box {
+  background-color: var(--code-bg);
+  padding: 1.1em 1.2em;
+  margin: 1.6em 0;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  line-height: 1.9;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.skeleton-box {
+  font-size: 0.88em;
+}
+
+.red-line-box {
+  border-left: 4px solid var(--text-primary);
+  border-radius: 0 4px 4px 0;
+  font-size: 0.86em;
+}
+
+.skeleton-box pre,
+.red-line-box pre {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  font: inherit;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* 每部結尾框 */
+.part-closing {
+  margin: 2.5em 0 1em;
+  padding: 0.2em 0 0.2em 1.1em;
+  border-left: 2px solid var(--text-secondary);
+  font-size: 0.95em;
+  color: var(--text-secondary);
+}
+
+.part-closing p {
+  margin-bottom: 0.9em;
+  color: var(--text-secondary);
+}
+
+.part-closing p:last-child {
+  margin-bottom: 0;
+}
+
+.part-closing strong {
+  color: var(--text-primary);
+}
+
+/* 章內小標題：h3 之上加一條墨色細線 */
+.sub-section,
+.sub-heading {
+  margin: 2em 0 0.9em;
+  padding-left: 0.8em;
+  border-left: 2px solid var(--text-primary);
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* 目錄頁的部標題與條目副標 */
+.part-heading {
+  margin: 2.8em 0 1em;
+  padding-bottom: 0.6em;
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.part-heading .part-label {
+  font-size: 0.78em;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+}
+
+.part-heading .part-title {
+  margin-top: 0.3em;
+  font-size: 1.15em;
+  font-weight: 700;
+}
+
+.toc-item .toc-subtitle {
+  display: block;
+  margin-top: 0.4em;
+  font-size: 0.82em;
+  color: var(--text-secondary);
+}
+
+.tagline,
+.author-credit {
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.author-credit {
+  margin-bottom: 2.4em;
+  font-size: 0.88em;
+  letter-spacing: 0.12em;
 }
