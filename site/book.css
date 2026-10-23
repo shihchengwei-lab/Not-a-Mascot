@@ -1,0 +1,775 @@
+/* ==========================================================================
+   book.css：五本書共用的唯一格式來源
+
+   底稿是 Reichenstein.css（iA.net 與 iA Writer 的閱讀排版）：
+   零縮排加明確段距、隨螢幕放大的字級、單欄置中（行寬 35em）、灰階、無特效。
+   第一部分是原版的規則，第二部分是書的元件，class 名稱沿用舊版。
+   與原版不同的地方，規則旁都標有「偏離」，原值列在本檔頭最後一節。
+   原版檔案已不在本資料夾，原值以那一節為準。
+
+   【用法】
+   本檔是正本，放在 _format-reference\book.css。
+   每本書的網站根目錄（放 index.html 的資料夾）放一份內容完全相同的複本，頁面用
+     <link rel="stylesheet" href="book.css">
+   引用（英文頁在 en\ 底下，寫 ../book.css），不再內嵌一份樣式。
+   要改格式，只改正本，再把同一份複製到每本書；各書的複本不單獨改。
+   新增章節時，複製同一本書裡既有的章節頁，再改內容。
+
+   【頁面檔案】
+   中文版放網站根目錄：index.html（目錄）、preface.html（前言，可有可無）、
+   ch1.html 到 chN.html、afterword.html（後記，可有可無）。
+   英文版放 en\ 子資料夾，檔名與中文版一對一。
+   語言鈕指向另一種語言的同名檔：中文頁寫 en/<檔名>.html，英文頁寫 ../<檔名>.html。
+   目錄頁左上的「← 書庫」網址寫死：
+     中文 https://ebook-one-rho.vercel.app/index.html
+     英文 https://ebook-one-rho.vercel.app/en/index.html
+   換書庫網址時，搜尋 ebook-one-rho.vercel.app，找到的地方全部同步改。
+
+   【章節頁骨架】
+   <nav class="top-nav">
+     <div class="nav-left">上一章連結</div>
+     <span class="book-title">書名</span>
+     <div class="nav-right">字體鈕、深色模式鈕、語言鈕、下一章連結</div>
+   </nav>
+   <header class="chapter-banner">章節標籤、h1、副標題</header>
+   <main>內文與各元件；結尾放 .human-notes 與 .chapter-nav</main>
+   <footer class="site-footer">作者、副標</footer>
+
+   【元件與外觀】
+   .top-nav          頂列。小字，不固定、隨頁面捲走，只顯示書名、字體鈕、深色模式鈕、語言鈕
+                     （目錄頁沒有字體鈕）；窄螢幕放不下時自動換到下一行。
+                     目錄頁左邊另有「← 書庫」。章節頁標記裡的「上一章」「下一章」連結
+                     由本檔隱藏，上下章只在頁尾出現。
+   .font-toggle      字體鈕，外觀是一行小字。
+   .theme-toggle     深色模式鈕，外觀同字體鈕；文字是「深色模式：開」或「深色模式：關」。
+   .chapter-banner   章節標題區，含 .chapter-label、h1、.subtitle；沒有底色。
+   .ai-monologue-tag 每章開頭的小標籤，灰色小字。
+   h2                章節內小標。舊版的 .section-divider 沒有樣式，標記裡留著不影響。
+   .highlight-line   金句：粗體，左邊一條細線。
+   .data-block       資料框：上下各一條細線，內含 .data-title 與表格。
+   table             表格：只有橫向細線。
+   .compare-block    對比框：左邊一條細線；.bad 用次要字色，.good 用主色，
+                     .label 放 [X] 或 [O]。
+   .code-block       指令或範例文字：等寬字，灰底（亮色淺灰、暗色深灰），長行自動換行。
+   .human-notes      章節結尾的筆記：上方一條細線；.note-header 是小標，
+                     .note-item 是條列項目，.icon（舊版小圖示）隱藏。
+   .chapter-nav      頁尾導覽：一排文字連結（.prev、.next），窄螢幕排不下時自動換行。
+   .site-footer      頁尾：.author 與副標。
+   目錄頁            .chapter-banner 放書系、書名、一句話介紹；.author-line 放作者；
+                     每章一個 .toc-card，內含 .toc-label 與 .toc-title。
+   .fade-in          舊版的淡入動畫已拿掉，本檔沒有它的樣式；標記裡留著不影響。
+
+   【Cinder 兩本書的元件】（Cinder_story、Not_a_Mascot 使用；其他書沒用到，規則放著不影響）
+   .content-wrapper  包內文的容器，等同 main，欄寬一樣。
+   .subsection-number  小節編號：一行小字，內含 .num。
+   .voice-tag        說話者標籤（作者、Agent 代筆）：灰色小字，同 .ai-monologue-tag；
+                     .voice-tag-author、.voice-tag-agent 沒有分色，靠文字區分。
+   .dialogue         對話框：左邊一條線。.dialogue-author 線是墨色、文字粗體；
+                     .dialogue-agent 線是細灰、文字用次要字色。灰階下靠線的深淺與字重分辨誰在說話。
+   .cinder-bubble    Cinder 的氣泡：左邊一條灰線；.cinder-head 是小字動作（內含 .goose 圖示），
+                     .cinder-body 是粗體正文，.cinder-translation 是次要字色的譯文；
+                     .quoted 是沒有 .cinder-head 的引用版，外觀只是間距略小。
+   .log-quote        日誌引文：細灰線、次要字色、斜體。
+   .signature        文末署名與日期：靠右、次要字色。
+   .chapter-epigraph 章首題詞：放在 .chapter-banner 內，次要字色、斜體；.epigraph-attr 是出處，另起一行。
+
+   【頁尾導覽的內容】
+   一般章節：「← 上一章」「目錄」「下一章 →」（英文：「← Previous」「Contents」「Next →」）。
+   前言只放「目錄」「下一章 →」；後記只放「← 上一章」「目錄」。
+   連結文字不寫章節名，只寫方向字和功能字。
+   作者與副標：中文頁寫「零一 著」，英文頁寫「By Zero One」，副標依各書自訂。
+
+   【字體切換鈕】
+   三段：標準、大、特大，分別是 1 倍、1.2 倍、1.5 倍（html.font-large、html.font-xlarge）。
+   按鈕的 id 是 fontToggle，顯示目前段落名稱的標籤 id 是 fontLabel。
+   讀者選的段落記在瀏覽器的 localStorage，鍵名 font-size-state（值 0、1、2）。
+   切換用的 JavaScript 寫在每一頁裡，不在本檔。
+   按鈕文字：中文頁「字體」加「標準／大／特大」，英文頁「Aa」加「Regular／Large／X-Large」。
+
+   【深色模式切換鈕】
+   預設跟著讀者的系統設定走。讀者按了頂列的「深色模式」鈕之後，以按的為準：
+   <html> 加上 data-theme="light" 或 data-theme="dark"，本檔對應的規則蓋過系統設定。
+   按一下，就是切到目前畫面的相反。
+   讀者的選擇記在瀏覽器的 localStorage，鍵名 book-theme（值 light 或 dark；沒有這一筆就是跟著系統）。
+   各書與書庫首頁的網址不同，瀏覽器分開記，在一個網站選的模式不會帶到另一個。
+   書庫首頁（ebook\）有自己的一套（shelf.js、library.css，鍵名 shelf-theme），規則與用詞都相同。
+   按鈕放在 .nav-right 裡，字體鈕之後、語言鈕之前（目錄頁沒有字體鈕，就放在語言鈕之前）：
+     <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">深色模式：關</button>
+   按鈕上的字：中文頁「深色模式：開」「深色模式：關」，英文頁「Dark mode: on」「Dark mode: off」。
+   標記裡先寫「關」，腳本讀完頁面後會依實際模式改寫文字與 aria-pressed。
+   JavaScript 寫在每一頁的 <head> 裡，不放在 <body> 結尾，是為了在畫面畫出來之前就套上
+   讀者的選擇，免得先閃一下錯的顏色。全文如下，每頁照抄、一字不差（測試會逐頁比對）：
+     <script>
+     (function() {
+       var root = document.documentElement;
+       var isZh = root.lang.indexOf('zh') === 0;
+       var labels = isZh ? { on: '深色模式：開', off: '深色模式：關' } : { on: 'Dark mode: on', off: 'Dark mode: off' };
+       var system = window.matchMedia('(prefers-color-scheme: dark)');
+       function isDark() {
+         return (root.getAttribute('data-theme') || (system.matches ? 'dark' : 'light')) === 'dark';
+       }
+       function show() {
+         var button = document.getElementById('themeToggle');
+         if (!button) return;
+         button.textContent = isDark() ? labels.on : labels.off;
+         button.setAttribute('aria-pressed', isDark() ? 'true' : 'false');
+       }
+       function load() {
+         var saved = null;
+         try { saved = localStorage.getItem('book-theme'); } catch(e) {}
+         if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+         else root.removeAttribute('data-theme');
+         show();
+       }
+       load();
+       document.addEventListener('DOMContentLoaded', show);
+       window.addEventListener('pageshow', function(event) { if (event.persisted) load(); });
+       if (system.addEventListener) system.addEventListener('change', show);
+       document.addEventListener('click', function(event) {
+         if (!event.target.closest('#themeToggle')) return;
+         var next = isDark() ? 'light' : 'dark';
+         root.setAttribute('data-theme', next);
+         try { localStorage.setItem('book-theme', next); } catch(e) {}
+         show();
+       });
+     })();
+     </script>
+   模式用 data-theme 屬性記，不用 class，因為字體鈕的腳本會整個換掉 <html> 的 class。
+
+   【網頁字體】
+   內文與標題都是無襯線，只載入字重 400 與 700 兩種。
+   中文版：Noto Sans TC
+     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+   英文版：Inter
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+   【與 Reichenstein.css 原版的差異】
+   1. 配色模式：原版沒有 color-scheme；本檔宣告 light dark，捲軸與表單控制項才會跟著變色；
+      讀者按「深色模式」鈕後，color-scheme 固定成 light 或 dark。
+   2. 字級倍率：原版 font-size 直接用流體字級；本檔再乘上 --font-scale（預設 1），
+      字體鈕把它設成 1.2 或 1.5。
+   3. 英文字體堆疊：原版沒有英文專用堆疊；本檔在英文頁把 Inter 放到系統字體前面。
+   4. 頁面上方留白：原版上下相同，是 clamp(3rem, 8vh, 6rem)；本檔上方改為
+      clamp(1rem, 3vh, 2rem)，因為最上面多了一列頂列；下方維持原值。
+   5. 左右留白：原版 1.5rem；本檔 clamp(18px, 5vw, 27px)，用 px 才不會隨字體鈕放大。
+   6. 單欄容器：原版只有 article、main、.ia-container；本檔再加 .content-wrapper
+      （Cinder 兩本用它包內文）、.top-nav、.chapter-banner、.site-footer，左右邊緣才會對齊。
+   7. 標題折行：原版沒有；本檔加 text-wrap: balance，避免標題最後一行只剩一兩個字。
+   8. 中文標題字距：原版標題字距一律 -0.02em；本檔中文標題改為 0，英文維持 -0.02em。
+   9. 程式碼：原版只處理 code 與 pre；本檔 .code-block 也套同樣的等寬字與底色，
+      pre 裡的 code 字級改 1em（原寫法會縮兩次），.code-block 的長行自動換行。
+   10. 連結底線：原版有 0.15 秒的顏色漸變；本檔拿掉。
+   11. 深色模式切換：原版只跟系統；本檔多一顆切換鈕（見上方【深色模式切換鈕】），
+      暗色色票因此寫在兩處（系統為暗；手動選暗），改色時兩處一起改。
+   ========================================================================== */
+
+:root {
+  /* 1. 紙張與墨水色票 (溫潤灰白底，深炭黑字，零眩光) */
+  --bg-canvas: #f9f8f6;
+  --text-primary: #1a1918;
+  --text-secondary: #66645e;
+  --border-hairline: #e2e0d8;
+  --code-bg: #f0eee9;
+
+  /* 2. 字體堆疊：優先使用 iA 開源字體與頂級系統無襯線體 */
+  --font-sans: "iA Writer Quattro", "iA Writer Duo", -apple-system, BlinkMacSystemFont,
+               "PingFang TC", "Noto Sans TC", "Heiti TC", sans-serif;
+  --font-mono: "iA Writer Mono", "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* 3. 距離字級公式 (手機 18px -> 桌機平滑放大至 22px) */
+  --font-size-fluid: clamp(1.125rem, 0.96rem + 0.6vw, 1.375rem);
+  --line-height-optimal: 1.7;
+
+  /* 4. 單行字數：鎖定在 35 個漢字 / 約 62 個英文字元寬度 */
+  --measure: 35em;
+
+  /* 5. 徹底捨棄縮排，依靠 1.25 倍文字高度的乾淨段距呼吸 */
+  --paragraph-spacing: 1.25em;
+
+  /* 偏離：亮暗兩種配色都宣告，捲軸與表單控制項才會跟著變色 */
+  color-scheme: light dark;
+  /* 偏離：頁面上的「字體」切換鈕改用倍率放大；倍率由下方 html.font-large / html.font-xlarge 設定，1 就是 Reichenstein 原值 */
+  --font-scale: 1;
+}
+
+/* 暗黑模式：預設跟著讀者的系統設定走；頁面上的「深色模式」鈕會在 <html> 上寫 data-theme="light" 或 "dark"，蓋過系統設定。
+   暗色色值要寫兩份（系統為暗且沒手動選亮；手動選暗），改色時兩處一起改；書庫首頁的 library.css 要同步這組色值 */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-canvas: #161616;
+    --text-primary: #dedede;
+    --text-secondary: #888888;
+    --border-hairline: #2c2c2c;
+    --code-bg: #202020;
+  }
+}
+:root[data-theme="dark"] {
+  --bg-canvas: #161616;
+  --text-primary: #dedede;
+  --text-secondary: #888888;
+  --border-hairline: #2c2c2c;
+  --code-bg: #202020;
+  color-scheme: dark;
+}
+:root[data-theme="light"] { color-scheme: light; }
+
+/* 偏離：英文版把網頁字體 Inter 放在系統字體前面，Windows 上才不會退回 Arial */
+:root:lang(en) {
+  --font-sans: "iA Writer Quattro", "iA Writer Duo", Inter, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", sans-serif;
+}
+
+/* ==========================================================================
+   全域渲染與微觀字體控制
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  /* 偏離：乘上倍率，字體切換鈕才有作用；預設倍率 1，字級與 Reichenstein 相同 */
+  font-size: calc(var(--font-size-fluid) * var(--font-scale));
+  line-height: var(--line-height-optimal);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual;
+}
+
+/* 字體切換鈕的兩段放大：比照舊版「大」「特大」的 1.2 倍、1.5 倍 */
+html.font-large  { --font-scale: 1.2; }
+html.font-xlarge { --font-scale: 1.5; }
+
+body {
+  margin: 0;
+  /* 偏離：頁面最上面多了一列小導覽，所以上方留白縮小；下方留白維持 Reichenstein 原值 */
+  padding-block: clamp(1rem, 3vh, 2rem) clamp(3rem, 8vh, 6rem);
+  /* 偏離：左右留白改用 px，不跟著「字體」切換放大。原寫法 1.5rem 在特大字級會從 27px 長到 40px，手機上每行少掉約兩個字 */
+  padding-inline: clamp(18px, 5vw, 27px);
+}
+
+/* ==========================================================================
+   單欄置中容器
+   偏離：頂列、章節標題區、頁尾也放進同一欄，左右邊緣才會對齊
+   ========================================================================== */
+
+article, main, .ia-container, .content-wrapper,
+.top-nav, .chapter-banner, .site-footer {
+  max-width: var(--measure);
+  margin-inline: auto;
+}
+
+/* ==========================================================================
+   段落與垂直韻律
+   ========================================================================== */
+
+p {
+  margin-top: 0;
+  margin-bottom: var(--paragraph-spacing);
+  text-indent: 0; /* 鐵律：絕不縮排 */
+  text-align: left;
+  hanging-punctuation: first allow-end last;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-top: 2.4em;
+  margin-bottom: 0.6em;
+  /* 偏離：標題折成兩行時兩行長短接近，避免最後一行只剩一兩個字 */
+  text-wrap: balance;
+}
+
+/* 偏離：中文是方塊字，負字距會讓筆畫黏在一起；中文標題不縮字距 */
+:lang(zh) h1, :lang(zh) h2, :lang(zh) h3 {
+  letter-spacing: 0;
+}
+
+h1 {
+  font-size: 1.65em;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+h3 {
+  font-size: 1.08em;
+}
+
+ul, ol {
+  margin-top: 0;
+  margin-bottom: var(--paragraph-spacing);
+  padding-left: 1.4em;
+}
+
+li {
+  margin-bottom: 0.4em;
+}
+
+blockquote {
+  margin: 1.75em 0;
+  padding-left: 1.25em;
+  border-left: 2px solid var(--border-hairline);
+  color: var(--text-secondary);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border-hairline);
+  margin: 3em 0;
+}
+
+/* 偏離：.code-block 是 div 不是 pre，也要吃到等寬字體與字級 */
+code, pre, .code-block {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 偏離：pre 裡面的 code 不再縮第二次（原寫法會縮成 0.88 × 0.88） */
+pre code {
+  font-size: 1em;
+}
+
+:not(pre) > code {
+  background-color: var(--code-bg);
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+}
+
+pre, .code-block {
+  background-color: var(--code-bg);
+  padding: 1.25em;
+  overflow-x: auto;
+  margin-bottom: var(--paragraph-spacing);
+  border-radius: 4px;
+}
+
+/* 偏離：.code-block 沿用舊版的行為，長行自動換行；對話範例在手機上才讀得完整 */
+.code-block {
+  margin-top: 1.75em;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--text-secondary);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  /* 偏離：拿掉原本 0.15 秒的底線漸變（書頁不要特效） */
+}
+
+a:hover {
+  text-decoration-color: var(--text-primary);
+}
+
+/* 偏離：內文裡的長字串（網址、電子郵件位址、行內程式碼）放不下一行時，可在任意處斷行，不把頁面撐出橫向捲軸。
+   overflow-wrap 會往下繼承，所以設在內文容器上就涵蓋裡面所有段落與斜體、粗體等行內元素。
+   用 break-word 而不是 anywhere：只在真的放不下時才斷，不會讓頂列按鈕被擠到中途斷字。 */
+article, main, .content-wrapper, a, :not(pre) > code {
+  overflow-wrap: break-word;
+}
+
+/* ==========================================================================
+   第二部分：書的元件
+   灰階三層：主文字 → 次要字（--text-secondary）→ 細線（--border-hairline）；
+   不用底色塊、不用圓角卡片、不用彩色，層次靠字重、留白與細線。
+   ========================================================================== */
+
+/* 表格：只有橫向細線；長字在格子裡折行，不會把頁面撐寬 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92em;
+  margin: 1em 0 var(--paragraph-spacing);
+}
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.55em 0.9em 0.55em 0;
+  border-bottom: 1px solid var(--border-hairline);
+  overflow-wrap: anywhere;
+}
+
+th {
+  font-weight: 700;
+  border-bottom-color: var(--text-secondary);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* 頂列：不固定、不模糊，隨頁面捲走；只留書名、字體、深色模式、語言 */
+.top-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 1.25em;
+  margin-bottom: 3em;
+}
+
+.top-nav .nav-right {
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: 0 1.25em;
+}
+
+.top-nav a,
+.top-nav .book-title,
+.font-toggle,
+.theme-toggle {
+  font-size: 0.78em;
+  color: var(--text-secondary);
+}
+
+.top-nav a,
+.font-toggle,
+.theme-toggle {
+  padding: 0.6em 0;
+  text-decoration: none;
+}
+
+.top-nav a:hover,
+.font-toggle:hover,
+.theme-toggle:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+  text-decoration-thickness: 1px;
+}
+
+/* 上一章／下一章只留在頁尾（頁尾本來就有）；目錄頁的「← 書庫」有 .lang-toggle，不受影響 */
+.top-nav .nav-left a:not(.lang-toggle),
+.top-nav .nav-right > a:not(.lang-toggle) {
+  display: none;
+}
+.top-nav .nav-left:not(:has(.lang-toggle)) {
+  display: none;
+}
+
+/* 字體鈕與深色模式鈕：保留功能，外觀退成一行小字 */
+.font-toggle,
+.theme-toggle {
+  appearance: none;
+  background: none;
+  border: 0;
+  margin: 0;
+  font-family: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 0.4em;
+}
+
+/* 章節標題區：不再是深色橫幅，就是紙上的一塊標題 */
+.chapter-banner {
+  margin-bottom: 3em;
+}
+
+.chapter-banner .chapter-label {
+  font-size: 0.78em;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+  margin-bottom: 0.75em;
+}
+
+.chapter-banner h1 {
+  margin-bottom: 0.4em;
+}
+
+.chapter-banner .subtitle {
+  color: var(--text-secondary);
+}
+
+/* 章節內小標：只剩 h2 本身（舊版兩側的線與不換行都拿掉了） */
+
+.ai-monologue-tag {
+  font-size: 0.78em;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+  margin-bottom: 1.5em;
+}
+
+/* 金句：同字級、粗體、左邊一條墨色細線 */
+.highlight-line {
+  font-weight: 700;
+  border-left: 2px solid var(--text-primary);
+  padding-left: 1.25em;
+  margin: 1.75em 0;
+}
+
+/* 資料框：上下各一條細線，不再是底色卡片 */
+.data-block {
+  margin: 1.75em 0;
+  padding: 1em 0 0.25em;
+  border-block: 1px solid var(--border-hairline);
+}
+
+.data-block .data-title {
+  font-size: 0.88em;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.data-block table {
+  margin-top: 0.5em;
+}
+
+/* 對比框：錯的用次要字色、對的用主色；[X] [O] 標籤本來就寫在文字裡 */
+.compare-block {
+  margin: 1.75em 0;
+  padding-left: 1.25em;
+  border-left: 2px solid var(--border-hairline);
+}
+
+.compare-block .bad {
+  color: var(--text-secondary);
+}
+
+.compare-block .label {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  margin-right: 0.5em;
+}
+
+/* 給人類的筆記：一條細線隔開，小標加粗，條目是一般清單 */
+.human-notes {
+  margin: 3.5em 0 2em;
+  padding-top: 2em;
+  border-top: 1px solid var(--border-hairline);
+}
+
+.human-notes .note-header {
+  font-size: 1.08em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.human-notes .icon {
+  display: none;
+}
+
+.human-notes .note-item {
+  display: list-item;
+  list-style: disc outside;
+  margin: 0 0 0.6em 1.4em;
+}
+
+/* 底部章節導覽：一排文字連結，不再是三個方塊按鈕；窄螢幕加大字級排不下時，自動折到下一行（量測 320px + 特大字級的英文頁發現會橫向超出） */
+.chapter-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1em;
+  margin-top: 3.5em;
+  padding-top: 1.25em;
+  border-top: 1px solid var(--border-hairline);
+}
+
+.chapter-nav a {
+  flex: 1;
+  padding: 0.6em 0;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-secondary);
+}
+
+.chapter-nav .prev { text-align: left; }
+.chapter-nav .next { text-align: right; }
+
+.chapter-nav a:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+  text-decoration-thickness: 1px;
+}
+
+/* 頁尾 */
+.site-footer {
+  margin-top: 4em;
+  padding-top: 1.25em;
+  border-top: 1px solid var(--border-hairline);
+}
+
+.site-footer > div {
+  font-size: 0.85em;
+  color: var(--text-secondary);
+}
+
+.site-footer .author {
+  font-weight: 700;
+}
+
+/* 目錄頁 */
+.author-line {
+  color: var(--text-secondary);
+  margin-bottom: 2.4em;
+}
+
+.toc-card {
+  display: block;
+  padding: 0.9em 0;
+  border-bottom: 1px solid var(--border-hairline);
+  text-decoration: none;
+}
+
+.toc-card:first-of-type {
+  border-top: 1px solid var(--border-hairline);
+}
+
+.toc-card .toc-label {
+  display: block;
+  font-size: 0.78em;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+}
+
+.toc-card .toc-title {
+  display: block;
+  font-weight: 700;
+}
+
+.toc-card:hover .toc-title {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+  text-decoration-thickness: 1px;
+}
+
+/* ==========================================================================
+   Cinder 兩本書的元件（Cinder_story、Not_a_Mascot）
+   灰階：作者與 Agent 的對話靠左線深淺與字重分辨，不靠顏色
+   ========================================================================== */
+
+/* 小節編號：一行小字，不再是置中的圓角標籤 */
+.subsection-number {
+  margin: 2.4em 0 0.8em;
+}
+
+.subsection-number .num {
+  font-size: 0.78em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+}
+
+/* 說話者標籤：灰色小字，與 .ai-monologue-tag 同一個樣子 */
+.voice-tag {
+  font-size: 0.78em;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+  margin-bottom: 1.5em;
+}
+
+/* 對話框：作者是墨色粗線加粗體；Agent 是細灰線加次要字色 */
+.dialogue {
+  margin: 1.5em 0;
+  padding-left: 1.25em;
+  border-left: 2px solid var(--border-hairline);
+}
+
+.dialogue p:last-child {
+  margin-bottom: 0;
+}
+
+.dialogue-author {
+  border-left-color: var(--text-primary);
+}
+
+.dialogue-author p {
+  font-weight: 700;
+}
+
+.dialogue-agent p {
+  color: var(--text-secondary);
+}
+
+.dialogue-agent p strong {
+  color: var(--text-primary);
+}
+
+/* Cinder 的氣泡：左邊一條次要色的線；小字動作、粗體正文、次要字色的譯文 */
+.cinder-bubble {
+  margin: 1.75em 0;
+  padding-left: 1.25em;
+  border-left: 2px solid var(--text-secondary);
+}
+
+.cinder-bubble .cinder-head {
+  font-size: 0.78em;
+  color: var(--text-secondary);
+}
+
+.cinder-bubble .goose {
+  font-style: normal;
+}
+
+.cinder-bubble .cinder-body {
+  font-weight: 700;
+}
+
+.cinder-bubble .cinder-translation {
+  color: var(--text-secondary);
+  margin-top: 0.4em;
+}
+
+.cinder-bubble.quoted {
+  margin: 1.25em 0;
+}
+
+/* 日誌引文：細灰線、次要字色、斜體 */
+.log-quote {
+  margin: 1.75em 0;
+  padding-left: 1.25em;
+  border-left: 2px solid var(--border-hairline);
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.log-quote .goose {
+  font-style: normal;
+  margin-right: 0.4em;
+}
+
+/* 文末署名與日期 */
+.signature {
+  margin-top: 3em;
+  text-align: right;
+  color: var(--text-secondary);
+}
+
+.signature p {
+  margin-bottom: 0.3em;
+  text-align: right;
+}
+
+/* 章首題詞：在 .chapter-banner 裡；出處另起一行 */
+.chapter-banner .chapter-epigraph {
+  margin-top: 1.5em;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.chapter-banner .chapter-epigraph .epigraph-attr {
+  display: block;
+  margin-top: 0.4em;
+  font-size: 0.78em;
+  font-style: normal;
+  letter-spacing: 0.08em;
+}

@@ -6,8 +6,43 @@
 <title>目錄 — 從外面看系統形狀</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="book.css">
+<script>
+(function() {
+  var root = document.documentElement;
+  var isZh = root.lang.indexOf('zh') === 0;
+  var labels = isZh ? { on: '深色模式：開', off: '深色模式：關' } : { on: 'Dark mode: on', off: 'Dark mode: off' };
+  var system = window.matchMedia('(prefers-color-scheme: dark)');
+  function isDark() {
+    return (root.getAttribute('data-theme') || (system.matches ? 'dark' : 'light')) === 'dark';
+  }
+  function show() {
+    var button = document.getElementById('themeToggle');
+    if (!button) return;
+    button.textContent = isDark() ? labels.on : labels.off;
+    button.setAttribute('aria-pressed', isDark() ? 'true' : 'false');
+  }
+  function load() {
+    var saved = null;
+    try { saved = localStorage.getItem('book-theme'); } catch(e) {}
+    if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+    else root.removeAttribute('data-theme');
+    show();
+  }
+  load();
+  document.addEventListener('DOMContentLoaded', show);
+  window.addEventListener('pageshow', function(event) { if (event.persisted) load(); });
+  if (system.addEventListener) system.addEventListener('change', show);
+  document.addEventListener('click', function(event) {
+    if (!event.target.closest('#themeToggle')) return;
+    var next = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('book-theme', next); } catch(e) {}
+    show();
+  });
+})();
+</script>
 </head>
 <body>
 
@@ -17,6 +52,7 @@
   </div>
   <span class="book-title">從外面看系統形狀</span>
   <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">深色模式：關</button>
     <a href="en/index.html" class="lang-toggle">EN</a>
   </div>
 </nav>
@@ -84,8 +120,6 @@
 
 <footer class="site-footer">
   <div class="author">零一 + Cinder 著</div>
-  <p class="footer-small">觀察期 2026-04-01 至 2026-04-09 · 九天 · 後記 2026-04-11</p>
-  <p class="footer-small">第 3–5 章於 2026-04-11 解禁</p>
 </footer>
 
 </body>

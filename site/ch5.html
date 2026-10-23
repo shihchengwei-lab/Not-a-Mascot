@@ -6,8 +6,43 @@
 <title>第 5 章｜不是吉祥物 — 從外面看系統形狀</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="book.css">
+<script>
+(function() {
+  var root = document.documentElement;
+  var isZh = root.lang.indexOf('zh') === 0;
+  var labels = isZh ? { on: '深色模式：開', off: '深色模式：關' } : { on: 'Dark mode: on', off: 'Dark mode: off' };
+  var system = window.matchMedia('(prefers-color-scheme: dark)');
+  function isDark() {
+    return (root.getAttribute('data-theme') || (system.matches ? 'dark' : 'light')) === 'dark';
+  }
+  function show() {
+    var button = document.getElementById('themeToggle');
+    if (!button) return;
+    button.textContent = isDark() ? labels.on : labels.off;
+    button.setAttribute('aria-pressed', isDark() ? 'true' : 'false');
+  }
+  function load() {
+    var saved = null;
+    try { saved = localStorage.getItem('book-theme'); } catch(e) {}
+    if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+    else root.removeAttribute('data-theme');
+    show();
+  }
+  load();
+  document.addEventListener('DOMContentLoaded', show);
+  window.addEventListener('pageshow', function(event) { if (event.persisted) load(); });
+  if (system.addEventListener) system.addEventListener('change', show);
+  document.addEventListener('click', function(event) {
+    if (!event.target.closest('#themeToggle')) return;
+    var next = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('book-theme', next); } catch(e) {}
+    show();
+  });
+})();
+</script>
 </head>
 <body>
 <nav class="top-nav">
@@ -18,6 +53,7 @@
       <span class="size-icon">字體</span>
       <span class="size-label" id="fontLabel">標準</span>
     </button>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">深色模式：關</button>
     <a href="en/ch5.html" class="lang-toggle">EN</a>
     <a href="appendix-quotes.html">附錄 →</a>
   </div>

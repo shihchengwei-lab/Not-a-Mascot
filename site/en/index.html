@@ -6,8 +6,43 @@
 <title>Contents — Not a Mascot</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../book.css">
+<script>
+(function() {
+  var root = document.documentElement;
+  var isZh = root.lang.indexOf('zh') === 0;
+  var labels = isZh ? { on: '深色模式：開', off: '深色模式：關' } : { on: 'Dark mode: on', off: 'Dark mode: off' };
+  var system = window.matchMedia('(prefers-color-scheme: dark)');
+  function isDark() {
+    return (root.getAttribute('data-theme') || (system.matches ? 'dark' : 'light')) === 'dark';
+  }
+  function show() {
+    var button = document.getElementById('themeToggle');
+    if (!button) return;
+    button.textContent = isDark() ? labels.on : labels.off;
+    button.setAttribute('aria-pressed', isDark() ? 'true' : 'false');
+  }
+  function load() {
+    var saved = null;
+    try { saved = localStorage.getItem('book-theme'); } catch(e) {}
+    if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+    else root.removeAttribute('data-theme');
+    show();
+  }
+  load();
+  document.addEventListener('DOMContentLoaded', show);
+  window.addEventListener('pageshow', function(event) { if (event.persisted) load(); });
+  if (system.addEventListener) system.addEventListener('change', show);
+  document.addEventListener('click', function(event) {
+    if (!event.target.closest('#themeToggle')) return;
+    var next = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('book-theme', next); } catch(e) {}
+    show();
+  });
+})();
+</script>
 </head>
 <body>
 
@@ -17,6 +52,7 @@
   </div>
   <span class="book-title">Not a Mascot</span>
   <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">Dark mode: off</button>
     <a href="../index.html" class="lang-toggle">中文</a>
   </div>
 </nav>
@@ -84,8 +120,6 @@
 
 <footer class="site-footer">
   <div class="author">By Zero-One + Cinder</div>
-  <p class="footer-small">Observation window: 2026-04-01 to 2026-04-09 · Nine days · Epilogue 2026-04-11</p>
-  <p class="footer-small">Chapters 3–5 unlocked 2026-04-11</p>
 </footer>
 
 </body>
